@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title> HTML - Aufbau einer Seite & Tags</title>
+	<link rel="stylesheet" type="text/css" href="style_html.css">
+	<style>
+		li {
+			margin-bottom: 3px;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<img src="html.png">
+		<nav>
+			<div>
+				<a href="html_Allgemeines.html"><strong>HTML</strong></a>
+				<a href="css_Allgemeines.html">CSS</a>
+				<a href="JS_Allgemeines.html">JavaScript</a>
+				<a href="python_Allgemeines.html">python</a>
+				<a href="ruby_Allgemeines.html">ruby</a>
+				<a href="terminal.html">Terminal</a>
+				<a href="git.html">Git</a>
+				<a href="Abkuerzungen.html">Abk&uuml;rzungen</a>
+				<br><br>
+			</div>
+			<div>
+				<a href="html_Allgemeines.html">Allgemeines</a>
+				<a href="html_Tags.html"><strong>Tags</strong></a>
+				<a href="html_Media.html">Media</a>
+				<a href="html_Maskierungen.html">Maskierungen</a>
+				<a href="html_Listen.html">Listen</a>
+				<a href="html_Tabellen.html">Tabellen</a>
+				<br>
+			</div>
+			<div>
+				<a href="html_Formulare.html">Formulare & Benutzereingaben</a>
+				<a href="html_CSS_and_JS_in_html.html">CSS & Javascript einbinden</a>
+			</div>
+		</nav>
+		<img src="html.png">
+	</header>
+
+	<main>
+
+		<div class="box">
+			<h3> Aufbau </h3>
+			<ul>
+				<li style="text-indent: -15px;">&lt;!doctype html&gt;</li>
+				<li style="text-indent: -15px;"> &lt;html&gt; </li>
+				<li style="text-indent: 10px;"> &lt;head&gt; </li>
+				<li style="text-indent: 10px;"> &lt;/head&gt; </li>
+				<li style="text-indent: 10px;"> &lt;body&gt; </li>
+				<li style="text-indent: 10px;"> &lt;/body&gt; </li>
+				<li style="text-indent: -15px;"> &lt;/html&gt; </li>
+			</ul>
+		</div>
+
+		<div class="box">
+			<h3> Tags im head </h3>
+			<table>
+				<tr>
+					<td>&lt;title&gt;&lt;/title&gt;</td>
+					<td>Kopfzeile</td>
+				</tr>
+				<tr>
+					<td>&lt;style&gt;&lt;/style&gt;</td>
+					<td>Darstellung</td>
+				</tr>
+				<tr>
+					<td>&lt;meta charset="UTF-8"&gt;</td>
+					<td>Zeichensatz</td>
+				</tr>
+				<tr>
+					<td>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</td>
+					<td>für die Darstellung auf Smartphones</td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="box">
+			<h3> Tags im body </h3>
+			<table>
+				<tr>
+					<td>&lt;header&gt;&lt;/header&gt;</td>
+					<td>Überschrift / Logo / Einführung</td>
+				</tr>
+				<tr>
+					<td>&lt;nav&gt;&lt;/nav&gt;</td>
+					<td>Links zum Navigieren</td>
+				</tr>
+				<tr>
+					<td>&lt;main&gt;&lt;/main&gt;</td>
+					<td>individueller Hauptinhalt</td>
+				</tr>
+				<tr>
+					<td>&lt;footer&gt;&lt;/footer&gt;</td>
+					<td>Fußzeile</td>
+				</tr>
+			</table>
+			<br>
+			<table>
+				<tr>
+					<td>&lt;h1&gt;&lt;/h1&gt;</td>
+					<td>Überschrift, 1-6, h1 nur ein Mal pro Seite verwenden!</td>
+				</tr>
+				<tr>
+					<td>&lt;article&gt;&lt;/article&gt;</td>
+					<td>unterteilt Seite, wenn nötig, in Artikel</td>
+				</tr>
+				<tr>
+					<td>&lt;section&gt;&lt;/section&gt;</td>
+					<td>unterteilt Artikel in Sektionen</td>
+				</tr>
+				<tr>
+					<td>&lt;aside&gt;&lt;/aside&gt;</td>
+					<td>Zusatzinformation</td>
+				</tr>
+				<tr>
+					<td>&lt;p&gt;&lt;/p&gt;</td>
+					<td>Absatz</td>
+				</tr>
+				<tr>
+					<td>&lt;div&gt;&lt;/div&gt;</td>
+					<td>unterteilt Text, block</td>
+				</tr>
+				<tr>
+					<td>&lt;span&gt;&lt;/span&gt;</td>
+					<td>unterteilt Text, inline</td>
+				</tr>
+			</table>
+			<br>
+			<table>
+				<tr>
+					<td>&lt;br&gt;</td>
+					<td>Zeilenumbruch</td>
+				</tr>
+				<tr>
+					<td>&lt;strong&gt;&lt;/strong&gt;</td>
+					<td>fett</td>
+				</tr>
+				<tr>
+					<td>&lt;b&gt;&lt;/b&gt;</td>
+					<td>fett</td>
+				</tr>
+				<tr>
+					<td>&lt;em&gt;&lt;/em&gt;</td>
+					<td>kursiv</td>
+				</tr>
+				<tr>
+					<td>&lt;i&gt;&lt;/i&gt;</td>
+					<td>kursiv</td>
+				</tr>
+				<tr>
+					<td>&lt;style&gt;&lt;/style&gt;</td>
+					<td>Darstellung</td>
+				</tr>
+			</table>
+			<br>
+		</div>
+
+		<div class="box">
+			Es sollte <strong>strong</strong> bzw. <strong>em</strong> statt b bzw. i verwendet werden,
+			da Suchmaschinen Wörtern, die mit strong oder em markiert werden,
+			mehr Bedeutung beimessen.<br><br>
+			u sollte nicht mehr verwendet werden.
+			Stattdessen kann man strong verwenden und mit css umgestalten.<br>
+		</div>
+
+		<div class="box">
+			<h3>Genereller Aufbau eines Tags</h3>
+			&lt;element attribut="value"&gt;Content&lt;/element&gt;<br><br>
+		</div>
+	</main>
+</body>
+
+</html>

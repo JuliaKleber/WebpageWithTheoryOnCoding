@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title> JS - Formulare </title>
+  <link rel="stylesheet" type="text/css" href="style_js.css">
+</head>
+
+<body>
+  <header>
+    <img src="JS.png">
+    <nav>
+      <div>
+        <a href="html_Allgemeines.html">HTML</a>
+        <a href="css_Allgemeines.html">CSS</a>
+        <a href="JS_Allgemeines.html"><strong>JavaScript</strong></a>
+        <a href="python_Allgemeines.html">Python</a>
+        <a href="ruby_Allgemeines.html">Ruby</a>
+        <a href="terminal.html">Terminal</a>
+        <a href="git.html">Git</a>
+        <a href="Abkuerzungen.html">Abk&uuml;rzungen</a>
+      </div><br>
+      <div>
+        <a href="JS_Allgemeines.html">Allgemeines</a>
+        <a href="JS_Variablen.html">Datentypen</a>
+        <a href="JS_if_else.html">Strukturen</a>
+        <a href="JS_OO.html">Klassen und Objekte</a>
+        <a href="JS_in_html.html"><strong>JavaScript im Browser</strong></a>
+        <a href="JS_Fehlerbehandlung.html">Fehlerbehandlung</a>
+        <a href="JS_react.html">React</a>
+      </div><br>
+      <div>
+        <a href="JS_in_html.html">JavaScript in HTML</a>
+        <a href="JS_Browser_Events.html">Browser Events</a>
+        <a href="JS_window-Objekt.html">window-Objekt</a>
+        <a href="JS_document-Objekt.html">document-Objekt</a>
+        <a href="JS_Formulare.html"><strong>Formulare</strong></a>
+        <a href="JS_canvas.html">Canvas</a>
+        <a href="JS_toggle_fade_slide.html">Toggle, Fade & Slide</a>
+        <a href="JS_Zeitverzoegerung.html">Zeitverzögerung</a>
+      </div>
+    </nav>
+    <img src="JS.png">
+  </header>
+  <main>
+    <div class="box">
+      <h3>Zugriff auf Bestandteile des Formulars</h3>
+      <p> document.forms.nameFormular.elements.nameElement.value<br>
+        document.forms[0].elements[1].value<br>
+        nameFormular.nameElement.value
+      </p>
+    </div>
+    <div class="box">
+      <h3>Beispiel für ein Formular</h3>
+      <form id="Formular" action="Abkuerzungen.html" method="GET" onsubmit="return auswerten()">
+        Name: <input id="Name" name="Name"><br>
+        E-Mail: <input id="Mail" name="Mail"><br>
+        Alter: <input id="Alter" name="Alter"><br>
+        Formular: <input type="submit" value="Absenden"><br>
+      </form>
+    </div>
+    <script>
+      "use strict"
+      function auswerten() {
+        if (Name.value == "") {
+          alert("Geben Sie Ihren Namen ein!");
+          Name.focus();
+          return false;
+        }
+        if (!Mail.value.includes('@')) {
+          alert("Geben Sie eine gültige E-Mail-Adresse ein!");
+          Mail.focus();
+          return false;
+        }
+        if (typeof zahl != number) {
+          alert("Geben Sie eine gültige Zahl ein!");
+          Alter.focus();
+          return false;
+        }
+        if (!zahl) {
+          alert("Geben Sie Ihr Alter ein!");
+          Alter.focus();
+          return false;
+        }
+        return true;
+      }
+    </script>
+  </main>
+  <footer>
+    <section>
+      <b>Referenz</b> f&uuml;r vorgefertigte Objekte und Methoden:
+      <a href="https://bmu-verlag.de/js3" />https://bmu-verlag.de/js3</a>
+    </section>
+  </footer>
+</body>
+
+</html>

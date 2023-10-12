@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title> JS - Klassen und Objekte </title>
+    <link rel="stylesheet" type="text/css" href="style_js.css">
+</head>
+
+<body>
+    <header>
+        <img src="JS.png">
+        <nav>
+            <div>
+                <a href="html_Allgemeines.html">HTML</a>
+                <a href="css_Allgemeines.html">CSS</a>
+                <a href="JS_Allgemeines.html"><strong>JavaScript</strong></a>
+                <a href="python_Allgemeines.html">Python</a>
+                <a href="ruby_Allgemeines.html">Ruby</a>
+                <a href="terminal.html">Terminal</a>
+                <a href="git.html">Git</a>
+                <a href="Abkuerzungen.html">Abk&uuml;rzungen</a>
+            </div><br>
+            <div>
+                <a href="JS_Allgemeines.html">Allgemeines</a>
+                <a href="JS_Variablen.html">Datentypen</a>
+                <a href="JS_if_else.html">Strukturen</a>
+                <a href="JS_OO.html"><strong>Klassen und Objekte</strong></a><br>
+                <a href="JS_in_html.html">JavaScript im Browser</a>
+                <a href="JS_Fehlerbehandlung.html">Fehlerbehandlung</a>
+                <a href="JS_react.html">React</a>
+            </div>
+        </nav>
+        <img src="JS.png">
+    </header>
+    <main>
+        <div class="box">
+            Erstellung einer <strong>Klasse</strong>
+            <br><br>
+            <strong>class</strong> Name1 { <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<strong>constructor</strong>(attribute) { <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.attribut1 = attribut1; <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this._attribut2 = attribut2; <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;} <br>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Methode(attribut) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.attribut1 += attribut4;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            }
+        </div>
+        <div class="box">
+            <strong>Vererbung</strong><br><br>
+            class Name2 <strong>extends</strong> Name1 { <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;constructor(attribute) { <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>super</strong>(attribute); <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.attribut3 = attribut3; <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;} <br>
+            }
+        </div>
+        <div class="box">
+            <strong>Deklaration</strong> eines neuen Objekts<br><br>
+            let Objekt = <strong>new</strong> Name2(attribute)
+        </div>
+        <div class="box">
+            <strong>Ausgabe von Attributen eines Objektes mit einer for-Schleife</strong><br><br>
+            for (let i in Objekt) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;document.write(i + ': ' + Objekt[i] + '&lt;br&gt;');<br>
+            }
+        </div>
+        <div class="box">
+            <p>
+                Wenn auf eine Variable nicht aus dem Hauptprogromm aus zugegriffen werden soll
+                (<strong>Kapselung</strong>),
+                stellt man ihr einen Unterstrich voran.
+                Man kann für diese Variablen <strong>getter-</strong> und <strong>setter-Methoden</strong>
+                einrichten.<br>
+            </p>
+            <p>
+                <strong>get</strong> attribut2() {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;return this._attribut2;<br>
+                }<br>
+            </p>
+            <p>
+                <strong>set</strong> attribut2(wert) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;this._attribut2 = wert;<br>
+                }<br>
+            </p>
+            <p>
+                Man kann in die setter-Methode eine if/else-Abfrage einbauen um nur bestimmte Werte zu akzeptieren.
+            </p>
+        </div>
+    </main>
+    <footer>
+        <section>
+            <b>Referenz</b> f&uuml;r vorgefertigte Objekte und Methoden:
+            <a href="https://bmu-verlag.de/js3" />https://bmu-verlag.de/js3</a>
+        </section>
+    </footer>
+</body>
+
+</html>

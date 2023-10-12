@@ -1,0 +1,223 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title> HTML - Formulare & Benutzereingaben </title>
+	<link rel="stylesheet" type="text/css" href="style_html.css">
+</head>
+
+<body>
+	<header>
+		<img src="html.png">
+		<nav>
+			<div>
+				<a href="html_Allgemeines.html"><strong>HTML</strong></a>
+				<a href="css_Allgemeines.html">CSS</a>
+				<a href="JS_Allgemeines.html">JavaScript</a>
+				<a href="python_Allgemeines.html">Python</a>
+				<a href="ruby_Allgemeines.html">Ruby</a>
+				<a href="terminal.html">Terminal</a>
+				<a href="git.html">Git</a>
+				<a href="Abkuerzungen.html">Abk&uuml;rzungen</a>
+				<br><br>
+			</div>
+			<div>
+				<a href="html_Allgemeines.html">Allgemeines</a>
+				<a href="html_Tags.html">Tags</a>
+				<a href="html_Media.html">Media</a>
+				<a href="html_Maskierungen.html">Maskierungen</a>
+				<a href="html_Listen.html">Listen</a>
+				<a href="html_Tabellen.html">Tabellen</a>
+				<br>
+			</div>
+			<div>
+				<a href="html_Formulare.html"><strong>Formulare & Benutzereingaben</strong></a>
+				<a href="html_CSS_and_JS_in_html.html">CSS & JavaScript einbinden</a>
+			</div>
+		</nav>
+		<img src="html.png">
+	</header>
+	<main>
+		<div class="box">
+			<h3> Textfelder</h3>
+			<ul>
+				<li>einzeiliges Textfeld:</li><br>
+				<li class="code">&lt;input type="text" name="name"&gt;</li><br>
+				<li>mehrzeilige Textfelder:</li><br>
+				<li class="code">&lt;textarea name="name" placeholder="kommentar"&gt;&lt;textarea&gt;</li>
+				<li class="code">&lt;textarea name="name" rows="7" cols="60"&gt;&lt;textarea&gt;</li>
+			</ul>
+		</div>
+		<div class="box">
+			<h3> Radiobuttons </h3>
+			<ul>
+				<li>- nur eine Auswahlmöglichkeit</li>
+				<li>- Werte werden gruppiert und müssen dann den selben Namen haben</li><br>
+				<li class="code">&lt;input type="radio" name="groupName" value="wert1" checked&gt;</li>
+				<li class="code">&lt;input type="radio" name="groupName" value="wert2"&gt;</li>
+			</ul>
+		</div>
+		<div class="box">
+			<h3> Checkboxes</h3>
+			<ul>
+				<li>- Mehrfachnennungen möglich</li><br>
+				<li class="code">&lt;input type="checkbox" name="name" value="wert" checked="true"&gt;</li>
+			</ul>
+		</div>
+		<div class="box">
+			<h3>Submit-Button</h3>
+			<ul>
+				<li class="code">&lt;input type="submit" value="text"&gt;</li>
+			</ul>
+		</div>
+		<div class="box">
+			<h3>Reset-Button</h3>
+			<ul>
+				<li class="code">&lt;input type="reset" value="text"&gt;</li>
+			</ul>
+		</div>
+		<div class="box">
+			<h3>versteckte Felder</h3>
+			<ul>
+				<li>- kann der Nutzer nicht sehen</li>
+				<li>- können Infos für die Datenbank enthalten</li><br>
+				<li class="code">&lt;input type="hidden" name="name" value="wert"&gt;</li>
+			</ul>
+		</div>
+		<div class="box">
+			<h3>Form Tag</h3>
+			<p>Wenn man die get-Methode verwendet, werden die Werte der Formularfelder nach einem<br>
+				Fragezeichen an die URL der Seite, die beim Abschicken geladen wird, angehängt.</p>
+			<p>Die post-Methode fügt die Werte hingegen in den Kopfbereich des HTTP-Requests ein.</p>
+			<p class="code">&lt;form action="zielseite" method="get"/"post"&gt;</p>
+		</div>
+		<div class="box">
+			<table>
+				<h3>Tags</h3>
+				<tr>
+					<td>&lt;form&gt;&lt;/form&gt;</td>
+					<td>Formular</td>
+				</tr>
+				<tr>
+					<td>&lt;fieldset&gt;</td>
+					<td>unterteilt das Form</td>
+				</tr>
+				<tr>
+					<td>&lt;legend&gt;</td>
+					<td>Name für fieldset</td>
+				</tr>
+				<tr>
+					<td>&lt;input&gt;</td>
+					<td>Eingabe</td>
+				</tr>
+				<tr>
+					<td>&lt;textarea&gt;</td>
+					<td>Textfeld</td>
+				</tr>
+				<tr>
+					<td>&lt;button&gt;</td>
+					<td>Button</td>
+				</tr>
+				<tr>
+					<td>&lt;label&gt;</td>
+				</tr>
+			</table>
+		</div>
+		<div class="box">
+			<table>
+				<h3>Attribute</h3>
+				<tr>
+					<td>action</td>
+					<td>location where data is submitted to</td>
+				</tr>
+				<tr>
+					<td>type</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>id</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>name</td>
+					<td>reference</td>
+				</tr>
+				<tr>
+					<td>value</td>
+					<td>reference</td>
+				</tr>
+				<tr>
+					<td>autocomplete = "on/off"</td>
+					<td>automatisches vervollständigen</td>
+				</tr>
+				<tr>
+					<td>disabled = "true/false"</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>required</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>autofocus</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>pattern</td>
+					<td>wird mit regulären Ausdruck verglichen</td>
+				</tr>
+			</table>
+			<br>
+		</div>
+		<div class="box">
+			<h3> input types </h3>
+			<ul>
+				<li>text</li>
+				<li>password</li>
+				<li>date</li>
+				<li>number</li>
+				<li>email</li>
+				<li>url</li>
+				<li>radio</li>
+				<li>checkbox</li>
+				<li>submit</li>
+				<li>reset</li>
+				<li>hidden</li>
+			</ul>
+		</div>
+		<div class="box">
+			<h3> Inhalt editieren </h3>
+			<table>
+				<tr>
+					<td>contenteditable(="true")</td>
+				</tr>
+				<tr>
+					<td>draggable="true"</td>
+				</tr>
+				<tr>
+					<td>ondragstart</td>
+				</tr>
+				<tr>
+					<td>ondragover</td>
+				</tr>
+			</table>
+		</div>
+		<div class="box">
+			<h3>Auswahllisten</h3>
+			<p class="code">
+				&lt;select name="geschlecht" size="2" multiple&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="weiblich"&gt;Weiblich&lt;/option&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="männlich"&gt;Männlich&lt;/option&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="keine Ahnung" selected&gt;Keine Ahnung&lt;/option&gt;<br>
+			&lt;/select&gt;
+			</p>
+		</div>
+		<div class="box">
+			<h3>Referenz:</h3>
+			<p>https://www.w3schools.com/tags/tag_form.asp</p>
+		</div>
+	</main>
+</body>
+
+</html>

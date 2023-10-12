@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title> Javascript - Strings </title>
+	<link rel="stylesheet" type="text/css" href="style_js.css">
+
+</head>
+
+<body>
+	<header>
+		<img src="JS.png">
+		<nav>
+			<div>
+				<a href="html_Allgemeines.html">HTML</a>
+				<a href="css_Allgemeines.html">CSS</a>
+				<a href="JS_Allgemeines.html"><strong>JavaScript</strong></a>
+				<a href="python_Allgemeines.html">Python</a>
+				<a href="ruby_Allgemeines.html">Ruby</a>
+				<a href="terminal.html">Terminal</a>
+				<a href="git.html">Git</a>
+				<a href="Abkuerzungen.html">Abk&uuml;rzungen</a>
+			</div><br>
+			<div>
+				<a href="JS_Allgemeines.html">Allgemeines</a>
+				<a href="JS_Variablen.html"><strong>Datentypen</strong></a>
+				<a href="JS_if_else.html">Strukturen</a>
+				<a href="JS_OO.html">Klassen und Objekte</a><br>
+				<a href="JS_in_html.html">JavaScript im Browser</a>
+				<a href="JS_Fehlerbehandlung.html">Fehlerbehandlung</a>
+				<a href="react.html">React</a>
+			</div><br>
+			<div>
+				<a href="JS_Variablen.html">Variablen</a>
+				<a href="JS_Zahlen.html">Zahlen</a>
+				<a href="JS_Boolean.html">Boolean</a>
+				<a href="JS_Strings.html"><strong>Strings</strong></a>
+				<a href="JS_zusammengesetzte_Datentypen.html">zusammengesetzte Datentypen</a>
+			</div>
+		</nav>
+		<img src="JS.png">
+	</header>
+	<main>
+		<div class="box">
+			<h4>Methoden</h4>
+			<table>
+				<tr>
+					<td>str.indexOf("text");</td>
+					<td>gibt Index von ersten Vorkommen von "text" zurück</td>
+				</tr>
+				<tr>
+					<td>str.lastIndexOf("text");</td>
+					<td>gibt Index von letztem Vorkommen von "text" zurück</td>
+				</tr>
+				<tr>
+					<td>str.slice(a, b);</td>
+					<td>entfernt Teilstück von a bis b aus str</td>
+				</tr>
+				<tr>
+					<td>str.splice(i, n);</td>
+					<td>entfernt Teilstück mit n Elementen von i an</td>
+				</tr>
+				<tr>
+					<td>newStr = str.slice(a, b);</td>
+					<td>speichert Teilstück von a bis b in newStr</td>
+				</tr>
+				<tr>
+					<td>str.trim();</td>
+					<td>Entfernt Weißraum</td>
+				</tr>
+				<tr>
+					<td>str.replace(a, b));</td>
+					<td>Ersetzt a durch b</td>
+				</tr>
+				<tr>
+					<td>str.toLowerCase();</td>
+					<td>nur Kleinbuchstaben</td>
+				</tr>
+				<tr>
+					<td>str.toUpperCase();</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>str.includes("text");</td>
+					<td>ist Text enthalten?</td>
+				</tr>
+				<tr>
+					<td>str.endsWith();</td>
+					<td>endet mit</td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="box">
+			<b>Vergleichsoperatoren</b> können auch für Strings genutzt werden. Das Ergebnis richtet sich dann nach der
+			<b>alphabetischen Ordnung</b>.
+		</div>
+
+		<div class="box">
+			<b>Zeilenumbruch</b><br>
+			&lt;br&gt;
+		</div>
+
+		<div class="box">
+			<h4>Umlaute</h4>
+			im head: &lt;meta charset="UTF-8"&gt;<br><br>
+			encodeURI('text');&nbsp;&nbsp;&nbsp;&nbsp
+			wandelt Umlaute in Zeichenfolgen um<br>
+			decodeURI('text');&nbsp;&nbsp;&nbsp;&nbsp;
+			wandelt Zeichenfolgen in Umlaute um
+		</div>
+	</main>
+	<footer>
+		<section>
+			<b>Referenz</b> f&uuml;r vorgefertigte Objekte und Methoden:
+			<a href="https://bmu-verlag.de/js3" />https://bmu-verlag.de/js3</a>
+		</section>
+	</footer>
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title> Ruby - Strings </title>
+	<link rel="stylesheet" type="text/css" href="style_ruby.css">
+
+</head>
+
+<body>
+	<header>
+		<img src="ruby.png">
+		<nav>
+			<div>
+				<a href="html_Allgemeines.html">HTML</a>
+				<a href="css_Allgemeines.html">CSS</a>
+				<a href="JS_Allgemeines.html">JavaScript</a>
+				<a href="python_Allgemeines.html">Python</a>
+				<a href="ruby_Allgemeines.html"><strong>Ruby</strong></a>
+				<a href="terminal.html">Terminal</a>
+				<a href="git.html">Git</a>
+				<a href="Abkuerzungen.html">Abk&uuml;rzungen</a>
+			</div><br>
+			<div>
+				<a href="ruby_Allgemeines.html">Allgemeines</a>
+				<a href="ruby_Variablen.html"><strong>Datentypen</strong></a>
+				<a href="ruby_if_else.html">Strukturen</a>
+				<a href="ruby_OO.html">Klassen und Objekte</a><br>
+				<a href="ruby_Fehlerbehandlung.html">Fehlerbehandlung</a>
+			</div><br>
+			<div>
+				<a href="ruby_Variablen.html">Variablen</a>
+				<a href="ruby_Zahlen.html">Zahlen</a>
+				<a href="ruby_Boolean.html">Boolean</a>
+				<a href="ruby_Strings.html"><strong>Strings</strong></a>
+				<a href="ruby_Arrays.html">Arrays</a>
+        <a href="ruby_Range.html">Range</a>
+			</div>
+		</nav>
+		<img src="ruby.png">
+	</header>
+	<main>
+		<div class="box">
+			<h4>Methoden</h4>
+			<table>
+				<tr>
+					<td>str.downcase</td>
+					<td>nur Kleinbuchstaben</td>
+				</tr>
+        <tr>
+					<td>str.upcase</td>
+					<td>nur Großbuchstaben</td>
+				</tr>
+        <tr>
+					<td>str.capitalize</td>
+					<td>erster Buchstabe in den Wörtern groß, alle anderen klein</td>
+				</tr>
+        <tr>
+					<td>str.length</td>
+					<td>Länge des Strings</td>
+				</tr>
+        <tr>
+					<td>str.count("text")</td>
+					<td>zählt Vorkommen von "text" in String</td>
+				</tr>
+        <tr>
+					<td>str.to_i</td>
+					<td>konvertiert zu Integer</td>
+				</tr>
+        <tr>
+					<td>str.strip()</td>
+					<td>Entfernt Weißraum</td>
+				</tr>
+        <tr>
+					<td>str.include?("text")</td>
+					<td>ist Text enthalten?</td>
+				</tr>
+        <tr>
+					<td>str.gsub("a", "b")</td>
+					<td>general substitution, ersetzt a durch b</td>
+				</tr>
+        <tr>
+					<td>str.end_with?()</td>
+					<td>endet mit</td>
+				</tr>
+        <tr>
+					<td>str.split</td>
+					<td>erstellt Array mit den Wörtern, wenn keine Klammer mit Inhalt</td>
+				</tr>
+        <tr>
+					<td>'don\!t'</td>
+					<td>Maskierung mit \</td>
+				</tr>
+        <tr>
+					<td>reverse</td>
+					<td>kehrt Reihenfolge der Buchstaben um</td>
+				</tr>
+        <tr>
+					<td>+</td>
+					<td>Zwei Strings zu einem String verbinden</td>
+				</tr>
+        <tr>
+					<td>"some text #{my_variable}"</td>
+					<td>Variablen in String einbinden. " und nicht '!</td>
+				</tr>
+			</table>
+      <br><br>
+      <table>
+				<tr>
+					<td>str.indexOf("text");</td>
+					<td>gibt Index von ersten Vorkommen von "text" zurück</td>
+				</tr>
+				<tr>
+					<td>str.lastIndexOf("text");</td>
+					<td>gibt Index von letztem Vorkommen von "text" zurück</td>
+				</tr>
+				<tr>
+					<td>str.slice(a, b);</td>
+					<td>entfernt Teilstück von a bis b aus str</td>
+				</tr>
+				<tr>
+					<td>str.splice(i, n);</td>
+					<td>entfernt Teilstück mit n Elementen von i an</td>
+				</tr>
+				<tr>
+					<td>newStr = str.slice(a, b);</td>
+					<td>speichert Teilstück von a bis b in newStr</td>
+				</tr>
+			</table>
+		</div>
+
+	</main>
+	<footer>
+		<section>
+			<b>Referenz</b> für Methoden:
+			<a href="https://ruby-doc.org/core-3.0.0/String.html" />https://ruby-doc.org/core-3.0.0/String.html</a>
+		</section>
+	</footer>
+</body>
+
+</html>

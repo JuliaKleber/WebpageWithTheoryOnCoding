@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title> HTML - Media </title>
+	<link rel="stylesheet" type="text/css" href="style_html.css">
+</head>
+
+<body>
+
+	<body>
+		<header>
+			<img src="html.png">
+			<nav>
+				<div>
+					<a href="html_Allgemeines.html"><strong>HTML</strong></a>
+					<a href="css_Allgemeines.html">CSS</a>
+					<a href="JS_Allgemeines.html">JavaScript</a>
+					<a href="python_Allgemeines.html">python</a>
+					<a href="ruby_Allgemeines.html">ruby</a>
+					<a href="terminal.html">Terminal</a>
+					<a href="git.html">Git</a>
+					<a href="Abkuerzungen.html">Abk&uuml;rzungen</a>
+					<br><br>
+				</div>
+				<div>
+					<a href="html_Allgemeines.html">Allgemeines</a>
+					<a href="html_Tags.html">Tags</a>
+					<a href="html_Media.html"><strong>Media</strong></a>
+					<a href="html_Maskierungen.html">Maskierungen</a>
+					<a href="html_Listen.html">Listen</a>
+					<a href="html_Tabellen.html">Tabellen</a>
+					<br>
+				</div>
+				<div>
+					<a href="html_Formulare.html">Formulare & Benutzereingaben</a>
+					<a href="html_CSS_and_JS_in_html.html">CSS & JavaScript einbinden</a>
+				</div>
+			</nav>
+			<img src="html.png">
+		</header>
+		<main>
+			<div class="box">
+				<h3> Bilder </h3>
+				<p>&lt;img scr="image's path" width="200" height="400" alt="text"/&gt;</p>
+				<p>path: local oder url<br>
+					alt: wenn Grafik nicht angezeigt werden kann</p>
+			</div>
+			<div class="box">
+				<h3> Anchor </h3>
+				<p>&lt;a href="url"/&gt; text &lt;/a&gt;</p>
+				<p>Verknüpfung zu anderer Seite</p>
+				<p><b>Attribute</b> target="_blank" neuer Tab, "_self" gleicher Tab, "_parent" Elternfenster, "_top"
+					ganzes
+					Fenster</p>
+			</div>
+			<div class="box">
+				<h3> Audio </h3>
+				<p>&lt;audio&gt;&lt;/audio&gt;</p>
+				<p><b>Attribute</b> src, type="audio/mpeg", controls="controls", autoplay, muted<br>
+					<b>Tags</b> &lt;source&gt;
+				</p>
+			</div>
+			<div class="box">
+				<h3> Video </h3>
+				<p>&lt;video&gt;&lt;/video&gt;</p>
+				<p><b>Attribute</b> src, type="audio/mp4", controls="controls", width, height, autoplay, muted,
+					poster<br>
+					<b>Tags</b> &lt;source&gt;<br>
+					height and width werden benötigt, da sonst das Bild flackert beim Laden
+				</p>
+			</div>
+			<div class="box">
+				<h3> Externe Inhalte </h3>
+				<p>&lt;embed&gt;</p>
+				<p><b>Attribute</b> src, type, width, height<br>
+					<b>Tags</b> &lt;source&gt;
+				</p>
+			</div>
+			<div class="box">
+				<h3> Canvas: Grafiken, Charts, Animationen mit js</h3>
+				<p>&lt;canvas&gt;&lt;/canvas&gt;</p>
+				<p><b>Attribute</b> id(für js benötigt), height, width</p>
+			</div>
+		</main>
+	</body>
+
+</html>

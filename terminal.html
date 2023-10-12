@@ -1,0 +1,199 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Terminal</title>
+  <link rel="stylesheet" type="text/css" href="style_terminal.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="html_Allgemeines.html">HTML</a>
+      <a href="css_Allgemeines.html">CSS</a>
+      <a href="JS_Allgemeines.html">JavaScript</a>
+      <a href="python_Allgemeines.html">Python</a>
+      <a href="ruby_Allgemeines.html">Ruby</a>
+      <a href="terminal.html"><strong>Terminal</strong></a>
+      <a href="git.html">Git</a>
+      <a href="Abkuerzungen.html">Abkürzungen</a>
+    </nav>
+    <img src="terminal.png">
+  </header>
+  <main>
+    <div class="box">
+      <h3> Bash-Befehle zum Bewegen in der Ordnerstruktur</h3>
+      <table>
+        <tr>
+          <td>pwd</td>
+          <td>gibt Pfad des aktuellen Ordners aus, print working directory</td>
+        </tr>
+        <tr>
+          <td>cd path/to/go</td>
+          <td>change directory</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Autovervollständigen: tab</td>
+        </tr>
+        <tr>
+          <td>cd ..</td>
+          <td>change to parent directory</td>
+        </tr>
+        <tr>
+          <td>..</td>
+          <td>change to parent directory</td>
+        </tr>
+        <tr>
+          <td>cd -</td>
+          <td>zurück zum letzten Pfad wo man war</td>
+        </tr>
+      </table>
+    </div>
+    <div class="box">
+      <h3> Bash-Befehle zum Anzeigen des Ordnerinhaltes</h3>
+      <table>
+        <tr>
+          <td>ls</td>
+          <td>listet Dateien und Ordner im Verzeichnis, list</td>
+        </tr>
+        <tr>
+          <td>ls -a</td>
+          <td>listet auch versteckte Dateien und Folder</td>
+        </tr>
+        <tr>
+          <td>ls -h</td>
+          <td>inklusive Dateigröße</td>
+        </tr>
+        <tr>
+          <td>ls -l</td>
+          <td>long list</td>
+        </tr>
+        <tr>
+          <td>ls -lh</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>ll</td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+    <div class="box">
+      <h3> Bash-Befehle zu Ordnern</h3>
+      <table>
+        <tr>
+          <td>mkdir folder_name</td>
+          <td>make directory</td>
+        </tr>
+        <tr>
+          <td>mkdir -p folder_name</td>
+          <td>no error if existing</td>
+        </tr>
+        <tr>
+          <td>mv folder path/to/directory</td>
+          <td>move</td>
+        </tr>
+        <tr>
+          <td>rmdir path/to/directory</td>
+          <td>remove, entfernt Datei</td>
+        </tr>
+      </table>
+    </div>
+    <div class="box">
+      <h3> Bash-Befehle zu Dateien</h3>
+      <table>
+        <tr>
+          <td>touch file_name</td>
+          <td>erstellt neue Datei</td>
+        </tr>
+        <tr>
+          <td>mv file_name path/to/directory</td>
+          <td>move</td>
+        </tr>
+        <tr>
+          <td>rm path/to/file</td>
+          <td>remove, entfernt Datei</td>
+        </tr>
+        <tr>
+          <td>rm -rf foldername</td>
+          <td>entfernt komplettes Verzeichnis, f für "force"</td>
+        </tr>
+        <tr>
+          <td>cat file_name</td>
+          <td>zeigt Inhalt der Datei an</td>
+        </tr>
+      </table>
+    </div>
+    <div class="box">
+      <h3> Bash-Befehle zu Berechtigungen</h3>
+      <table>
+        <tr>
+          <td>chmod</td>
+          <td>Ändert Berechtigungen</td>
+        </tr>
+        <tr>
+          <td>777</td>
+          <td>Oktalnotation, jeder darf alles</td>
+        </tr>
+        <tr>
+          <td>wer?</td>
+          <td>Eigentümer, Gruppe, alle</td>
+        </tr>
+        <tr>
+          <td>Zahlen</td>
+          <td>4 Lesen, 2 Schreiben, 1 Ausführen</td>
+        </tr>
+      </table>
+    </div>
+    <div class="box">
+      <h3> Bash-Befehle zu Paketmanagern</h3>
+      <table>
+        <tr>
+          <td>sudo apt update</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>sudo apt upgrade</td>
+          <td></td>
+        </tr>
+      </table>
+      </div>
+      <div class="box">
+        <h3>Sonstiges</h3>
+        <table>
+          <tr>
+            <td>clear</td>
+            <td>leert das Terminal</td>
+          </tr>
+          <tr>
+            <td>Befehl --help</td>
+            <td>erklärt Befehl</td>
+          </tr>
+          <tr>
+            <td>-v</td>
+            <td>verbose: mehr Infos</td>
+          </tr>
+          <tr>
+            <td>code .</td>
+            <td>öffnet die Dateien im Ordner in vs code</td>
+          </tr>
+          <tr>
+            <td>ruby filename.rb</td>
+            <td>führt die ruby-Datei aus</td>
+          </tr>
+          <tr>
+            <td>q</td>
+            <td>quit</td>
+          </tr>
+          <tr>
+            <td>rake</td>
+            <td>testet ruby-Datei</td>
+          </tr>
+        </table>
+    </div>
+  </main>
+</body>
+
+</html>

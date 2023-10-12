@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title> CSS - Allgemeines </title>
+	<link rel="stylesheet" type="text/css" href="style_css.css">
+</head>
+
+<body>
+	<header>
+		<img src="css3.png">
+		<nav>
+			<div>
+				<a href="html_Allgemeines.html">HTML</a>
+				<a href="css_Allgemeines.html"><strong>CSS</strong></a>
+				<a href="JS_Allgemeines.html">JavaScript</a>
+				<a href="python_Allgemeines.html">Python</a>
+				<a href="ruby_Allgemeines.html">Ruby</a>
+				<a href="terminal.html">Terminal</a>
+				<a href="git.html">Git</a>
+				<a href="Abkuerzungen.html">Abk&uuml;rzungen</a>
+				<br><br>
+			</div>
+			<div>
+				<a href="css_Allgemeines.html"><strong>Allgemeines</strong></a>
+				<a href="css_css_in_html.html">CSS in HTML</a>
+				<a href="css_Hintergrund.html">Hintergrund</a>
+				<a href="css_Text.html">Text</a>
+				<a href="css_Rahmen_&_Abstand.html">Rahmen und Abstand</a>
+				<a href="css_Position.html">Position</a>
+				<br>
+			</div>
+			<div>
+				<a href="css_Display.html">Display</a>
+				<a href="css_ButtonDesign.html">Button Design</a>
+				<a href="css_Overflowing_Content.html">Overflowing Content</a>
+				<a href="css_Pseudoklassen.html">Pseudoklassen</a>
+				<a href="css_Media_Queries.html">Media Queries</a>
+			</div>
+		</nav>
+		<img src="css3.png">
+	</header>
+	<main>
+		<div class="box">
+			<h3>CSS = Cascading Style Sheets</h3>
+			<p>Selectors & Declarations</p><br>
+		</div>
+		<div class="box">
+			<h3>Kommentare</h3>
+			<p>/* */</p>
+		</div>
+		<div class="box">
+			<h3>Selektoren</h3>
+			<p>Können Tags, ids oder Klassen sein</p>
+		</div>
+		<div class="box">
+			<h3>Styling für HTML-Tags</h3>
+			<p class="code">
+				p, a {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+				}</p>
+			<p>Styling gilt für p und a.</p>
+		</div>
+		<div class="box">
+			<h3>Styling für HTML-Tags</h3>
+			<p class="code">
+				p a {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+				}</p>
+			<p>Styling gilt für a, das innerhalb von p steht.</p>
+		</div>
+		<div class="box">
+			<h3>Styling für HTML-Tags</h3>
+			<p class="code">
+				section {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+				}</p>
+			<p class="code">
+				p {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+				}</p>
+			<p>Styling von dem inneren Element, also von p, hat Vorrang.</p>
+		</div>
+		<div class="box">
+			<h3>ids</h3>
+			<p class="code">
+				&lt;div id="idName"&gt;</p>
+			<p class="code">
+				#idName {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+				}</p>
+			<p>Nur ein Element mit der id</p>
+			<p>Nur eine id pro Element</p>
+		</div>
+		<div class="box">
+			<h3>classes</h3>
+			<p class="code">
+				&lt;div class="className"&gt;</p>
+			<p class="code">
+				.className {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+				}
+			</p>
+			<p>Mehrere Elemente mit der Klasse</p>
+		</div>
+		<div class="box">
+			<h3>Elemente mit mehreren Klassen</h3>
+			<p class="code">
+				&lt;div class="className1 className2"&gt;</p>
+		</div>
+		<div class="box">
+			<h3>Tags und Klassen mischen</h3>
+			<p class="code">
+				p.className {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+				}</p>
+			<p>Gilt für alle ps mit der Klasse className.</p>
+		</div>
+	</main>
+</body>
+
+</html>

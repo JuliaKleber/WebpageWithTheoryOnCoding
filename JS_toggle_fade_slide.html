@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+  <head>
+	<meta charset="UTF-8">
+	<title> JS - toggle, fade & slide </title>
+	<link rel="stylesheet" type="text/css" href="style_js.css">
+	<style>
+	  .hidden {
+		position: absolute;
+		right: 0;
+		opacity: 0;
+		transform: translateX(100%);
+		transition: transform 2s ease-out, opacity 2s ease-out;
+	  }
+	  .visible {
+		position: relative;
+		transform: translateX(0);
+		opacity: 1;
+		transition: transform 2s ease-in, opacity 2s ease-in;
+	  }
+	</style>
+  </head>
+  <body>
+	<header>
+		<img src="JS.png">
+		<nav>
+		  <div>
+			<a href="html_Allgemeines.html">HTML</a>
+			<a href="css_Allgemeines.html">CSS</a>
+			<a href="JS_Allgemeines.html"><strong>JavaScript</strong></a>
+			<a href="python_Allgemeines.html">Python</a>
+			<a href="ruby_Allgemeines.html">Ruby</a>
+			<a href="terminal.html">Terminal</a>
+			<a href="git.html">Git</a>
+			<a href="Abkuerzungen.html">Abk&uuml;rzungen</a>
+		  </div><br>
+		  <div>
+			<a href="JS_Allgemeines.html">Allgemeines</a>
+			<a href="JS_Variablen.html">Datentypen</a>
+			<a href="JS_if_else.html">Strukturen</a>
+			<a href="JS_OO.html">Klassen und Objekte</a>
+			<a href="JS_in_html.html"><strong>JavaScript im Browser</strong></a>
+			<a href="JS_Fehlerbehandlung.html">Fehlerbehandlung</a>
+			<a href="JS_react.html">React</a>
+		  </div><br>
+		  <div>
+			<a href="JS_in_html.html">JavaScript in HTML</a>
+			<a href="JS_Browser_Events.html">Browser Events</a>
+			<a href="JS_window-Objekt.html">window-Objekt</a>
+			<a href="JS_document-Objekt.html">document-Objekt</a>
+			<a href="JS_Formulare.html">Formulare</a>
+			<a href="JS_canvas.html">Canvas</a>
+			<a href="JS_toggle_fade_slide.html"><strong>Toggle, Fade & Slide</strong></a>
+			<a href="JS_Zeitverzoegerung.html">Zeitverzögerung</a>
+		  </div>
+		</nav>
+		<img src="JS.png">
+	  </header>
+	<main>
+		<div class="box">
+			<h4>HTML</h4>
+			<p> &lt;div id="elementToToggle" class="hidden"&gt;This is a hidden element.&lt;/div&gt;<br>
+				&lt;button id="toggleButton"&gt;Toggle Element&lt;/button&gt;
+			</p>
+		</div>
+		<div class="box">
+			<h4>css</h4>
+			<p> .hidden {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;position: absolute;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;right: 0;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;opacity: 0;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;transform: translateX(100%);<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;transition: transform 2s ease-out, opacity 2s ease-out;<br>
+				}<br><br>
+				.visible {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;position: relative;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;transform: translateX(0);<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;opacity: 1;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;transition: transform 2s ease-in, opacity 2s ease-in;<br>
+				}
+			</p>
+		</div>
+		<div class="box">
+			<h4>JavaScript</h4>
+			<p> const toggleButton = document.getElementById("toggleButton");<br>
+				const elementToToggle = document.getElementById("elementToToggle");<br>                     
+				toggleButton.addEventListener("click", function() {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;elementToToggle.classList.toggle("hidden");<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;elementToToggle.classList.toggle("visible");<br>
+				});            
+			</p>
+		</div>
+		<div class="box">
+			<h4>Beispiel</h4>
+			<p> <div id="elementToToggle" class="hidden">This is a hidden element.</div><br>
+				<button id="toggleButton">See this in action!</button>                   
+			</p>
+		</div>
+		<script>
+			const toggleButton = document.getElementById("toggleButton");
+			const elementToToggle = document.getElementById("elementToToggle");                     
+			toggleButton.addEventListener("click", function() {
+				elementToToggle.classList.toggle("hidden");
+				elementToToggle.classList.toggle("visible");
+			});
+		</script>
+	</main>
+	<footer>
+	  <section>
+		<b>Referenz</b> f&uuml;r vorgefertigte Objekte und Methoden:
+		<a href="https://bmu-verlag.de/js3"/>https://bmu-verlag.de/js3</a>
+	  </section>
+	</footer>
+  </body>
+</html>

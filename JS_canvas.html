@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+  <head>
+	<meta charset="UTF-8">
+	<title> JS - Canvas </title>
+	<link rel="stylesheet" type="text/css" href="style_js.css">
+  </head>
+  <body>
+	<header>
+		<img src="JS.png">
+		<nav>
+			<div>
+				<a href="html_Allgemeines.html">HTML</a>
+				<a href="css_Allgemeines.html">CSS</a>
+				<a href="JS_Allgemeines.html"><strong>JavaScript</strong></a>
+				<a href="python_Allgemeines.html">Python</a>
+				<a href="ruby_Allgemeines.html">Ruby</a>
+				<a href="terminal.html">Terminal</a>
+				<a href="git.html">Git</a>
+				<a href="Abkuerzungen.html">Abk&uuml;rzungen</a>
+			</div><br>
+			<div>
+				<a href="JS_Allgemeines.html">Allgemeines</a>
+				<a href="JS_Variablen.html">Datentypen</a>
+				<a href="JS_if_else.html">Strukturen</a>
+				<a href="JS_OO.html">Klassen und Objekte</a>
+				<a href="JS_in_html.html"><strong>JavaScript im Browser</strong></a>
+				<a href="JS_Fehlerbehandlung.html">Fehlerbehandlung</a>
+				<a href="JS_react.html">React</a>
+			</div><br>
+			<div>
+				<a href="JS_in_html.html">JavaScript in HTML</a>
+				<a href="JS_Browser_Events.html">Browser Events</a>
+				<a href="JS_window-Objekt.html">window-Objekt</a>
+				<a href="JS_document-Objekt.html">document-Objekt</a>
+				<a href="JS_Formulare.html">Formulare</a>
+				<a href="JS_canvas.html"><strong>Canvas</strong></a>
+				<a href="JS_toggle_fade_slide.html">Toggle, Fade & Slide</a>
+				<a href="JS_Zeitverzoegerung.html">Zeitverzögerung</a>
+			</div>
+		</nav>
+		<img src="JS.png">
+	</header>  
+	<main>
+	    <div class="box">
+			<b>Canvas</b><br><br>
+		  <table>						
+			<tr>
+			  <td style="font-family: courier new">&lt;canvas id="myCanvas" height="100" width="100"&gt;&lt;/canvas&gt;</td>
+			  <td>canvas in html</td>
+			</tr>
+			<tr>
+			  <td style="font-family: courier new">canvas = document.getElementById("myCanvas");</td>
+			  <td>Zeichenfläche schaffen</td>
+			</tr>
+			<tr>
+			  <td style="font-family: courier new">context = canvas.getContext("2d");</td>
+			</tr>
+		  </table>
+		  <br>
+		  <table>
+			<tr>
+			  <td style="font-family: courier new">context.fillRect(x, y, breite, höhe);</td>
+			  <td>gefülltes Rechteck zeichnen</td>
+			</tr>
+			<tr>
+			  <td style="font-family: courier new">context.strokeRect(x, y, breite, höhe);</td>
+			  <td>Umriss Rechteck zeichnen</td>
+			</tr>
+			<tr>
+			  <td style="font-family: courier new">context.arc(x, y, radius, startwinkel, endwinkel, anticlockwise);</td>
+			  <td>Umriss Kreis zeichnen</td>
+			</tr>
+		  </table>
+		  <br>
+		  <table>						
+			<tr>
+			  <td style="font-family: courier new">context.moveTo(x, y);</td>
+			  <td>Position ändern ohne zu zeichnen</td>
+			</tr>
+			<tr>
+			  <td style="font-family: courier new">context.lineTo(x, y);</td>
+			  <td>Linie zeichnen</td>
+			</tr>
+			<tr>
+			  <td style="font-family: courier new">context.beginPath();</td>
+			  <td>Pfad beginnen</td>
+			</tr>
+			<tr>
+			  <td style="font-family: courier new">context.endPath();</td>
+			  <td>Pfad schließen</td>
+			</tr>
+			<tr>
+			  <td style="font-family: courier new">context.stroke();</td>
+			  <td>Pfad einfärben</td>
+			</tr>
+			<tr>
+			  <td style="font-family: courier new">context.fill();</td>
+			  <td>Fläche im Pfad füllen</td>
+			</tr>			
+		  </table>
+		  <br>
+		  <table>						
+			<tr>
+			  <td style="font-family: courier new">canvas.fillStyle = "blue";</td>
+			  <td>Füllfarbe</td>
+			</tr>
+			<tr>
+			  <td style="font-family: courier new">canvas.strokeStyle = "red";</td>
+			  <td>Strichfarbe</td>
+			</tr>
+			<tr>
+			  <td style="font-family: courier new">canvas.lineWidth = 2;</td>
+			  <td>Strichbreite</td>
+			</tr>
+		  </table>
+		  <br>
+		  <table>						
+			<tr>
+			  <td style="font-family: courier new">canvas.clearRect(x, y, breite, höhe);</td>
+			  <td>Löschen von Canvas</td>
+			</tr>
+		  </table>
+		  <br>
+		  <table>						
+			<tr>
+			  <td style="font-family: courier new">canvas.addEventListener("click", function(event) {  });</td>
+			  <td>Mausklick-Event</td>
+			</tr>
+			<tr>
+			  <td style="font-family: courier new">canvas.addEventListener("mousemove", function(event) {  });</td>
+			  <td>Mausbewegungs-Event</td>
+			</tr>
+		  </table>
+		</div>
+		<br><br>
+		<div class="box">
+		  <h4>Beispiel</h4>
+		  <p style="margin: 20px; font-family: courier new">
+			function drawSymbol(circle) {<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;// Zeichnet entweder ein Kreuz oder einen Kreis.<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;const canvas = document.getElementById("canvas");<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;const context = canvas.getContext('2d');<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;context.strokeStyle = 'schwarz';<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;context.lineWidth = 5;<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;if (circle === true) {<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;context.moveTo(25, 75);<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;context.arc(75, 75, 50, Math.PI, 3 * Math.PI);<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;} else if (circle === false) {<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;context.moveTo(25, 25);<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;context.lineTo(125, 130);<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;context.moveTo(25, 125);<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;context.lineTo(125, 25);<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;context.stroke();<br>
+			}
+		  </p>
+		</div>	   
+	</main>
+	<footer>
+	  <section>
+		<b>Referenz</b> f&uuml;r vorgefertigte Objekte und Methoden:
+		<a href="https://bmu-verlag.de/js3"/>https://bmu-verlag.de/js3</a>
+	  </section>
+	</footer>
+  </body>
+</html>

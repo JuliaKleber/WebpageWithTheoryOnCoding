@@ -1,0 +1,229 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title> Javascript - zusammengesetzte Datentypen </title>
+    <link rel="stylesheet" type="text/css" href="style_js.css">
+</head>
+
+<body>
+    <header>
+        <img src="JS.png">
+        <nav>
+            <div>
+                <a href="html_Allgemeines.html">HTML</a>
+                <a href="css_Allgemeines.html">CSS</a>
+                <a href="JS_Allgemeines.html"><strong>JavaScript</strong></a>
+                <a href="python_Allgemeines.html">Python</a>
+                <a href="ruby_Allgemeines.html">Ruby</a>
+                <a href="terminal.html">Terminal</a>
+                <a href="git.html">Git</a>
+                <a href="Abkuerzungen.html">Abk&uuml;rzungen</a>
+            </div><br>
+            <div>
+                <a href="JS_Allgemeines.html">Allgemeines</a>
+                <a href="JS_Variablen.html"><strong>Datentypen</strong></a>
+                <a href="JS_if_else.html">Strukturen</a>
+                <a href="JS_OO.html">Klassen und Objekte</a><br>
+                <a href="JS_in_html.html">JavaScript im Browser</a>
+                <a href="JS_Fehlerbehandlung.html">Fehlerbehandlung</a>
+                <a href="react.html">React</a>
+            </div><br>
+            <div>
+                <a href="JS_Variablen.html">Variablen</a>
+                <a href="JS_Zahlen.html">Zahlen</a>
+                <a href="JS_Boolean.html">Boolean</a>
+                <a href="JS_Strings.html">Strings</a>
+                <a href="JS_zusammengesetzte_Datentypen.html"><strong>zusammengesetzte Datentypen</strong></a>
+            </div>
+        </nav>
+        <img src="JS.png">
+    </header>
+    <main>
+        <div class="box">
+            <b>Array</b><br><br>
+            können Elemente unterschiedlichen Datentyps beinhalten<br><br>
+            <table>
+                <tr>
+                    <td>let arr = [wert1, wert2];</td>
+                    <td>Erstellen eines Arrays</td>
+                </tr>
+                <tr>
+                    <td>arr[i]</td>
+                    <td>Zugriff auf i-te Element</td>
+                </tr>
+                <tr>
+                    <td>arr[arr.length] = wert;</td>
+                    <td>Element am Ende hinzufügen</td>
+                </tr>
+                <tr>
+                    <td>arr.push(wert);</td>
+                    <td>Element am Ende hinzufügen</td>
+                </tr>
+                <tr>
+                    <td>arr.unshift(wert);</td>
+                    <td>Element am Anfang hinzufügen</td>
+                </tr>
+                <tr>
+                    <td>arr.shift();</td>
+                    <td>Element am Ende entfernen</td>
+                </tr>
+                <tr>
+                    <td>arr.pop();</td>
+                    <td>Element am Ende entfernen</td>
+                </tr>
+                <tr>
+                    <td>arr.includes("text");</td>
+                    <td>true, wenn "text" in Array enthalten ist</td>
+                </tr>
+                <tr>
+                    <td>arr.splice(i, n);</td>
+                    <td>n Elemente von i an werden aus dem Array gelöscht.</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="box">
+            <h4>array.map()</h4>
+            <p class="code">arrayNew = array.map((element) => {});</p>
+            <p>Es wird ein neues Array auf Grundlage eines alten Arrays erstellt
+                <br>indem auf den Elementen des alten Arrays eine Funktion aufgerufen wird.
+            </p>
+        </div>
+
+        <div class="box">
+          <h4>array.filter()</h4>
+          <p>Es wird ein neues Array erstellt, das nur einen Teil der Elemente enthält aufgrund einer definierten Bedingung</p>
+
+          <p class="code">const newArray = array.filter(function(currentValue, index, arr) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;block;<br>
+        });</p>
+          <p>Rückgabewert: true, wenn das Element beibehalten werden soll, ansonsten false
+          </p>
+          <p class="code">const numbers = [1, 2, 3, 4, 5, 6];<br>
+            const evenNumbers = numbers.filter(num => num % 2 === 0);<p>
+        </div>
+
+        <div class="box">
+            <h3>noch einpflegen:</h3>
+            Suchen und Filtern von Elementen:
+            Index eines Elements finden: fruits.indexOf("Banane") gibt den Index von "Banane" zurück.
+            Ein neues Array erstellen, das Elemente basierend auf einer Bedingung filtert: fruits.filter(fruit =>
+            fruit.length > 5).
+            Sortieren von Arrays:
+            <br><br>
+            Sortieren in aufsteigender Reihenfolge: fruits.sort().
+            Sortieren in absteigender Reihenfolge: fruits.reverse().
+            Verketten von Arrays:
+            <br><br>
+            Arrays verketten: let allFruits = fruits.concat(["Kiwi", "Erdbeere"]).
+            Überprüfen von Arrays:
+            <br><br>
+            Überprüfen, ob ein Element im Array vorhanden ist: fruits.includes("Apfel") gibt true zurück, wenn "Apfel"
+            im Array ist.
+            Überprüfen, ob alle Elemente einer Bedingung entsprechen: fruits.every(fruit => fruit.length > 3).
+            Transformation von Arrays:
+            <br><br>
+            Ein neues Array erstellen, indem Sie eine Funktion auf jedes Element anwenden: fruits.map(fruit =>
+            fruit.toUpperCase()).
+            Reduzieren von Arrays:
+            <br><br>
+            Reduzieren (aggregieren) von Array-Elementen zu einem einzelnen Wert: fruits.reduce((accumulator,
+            currentValue) => accumulator + currentValue).
+            Entfernen von Elementen nach Index:
+            <br><br>
+            Verwenden Sie splice zum Entfernen von Elementen an einem bestimmten Index: fruits.splice(1, 2) entfernt 2
+            Elemente ab Index 1.
+        </div>
+
+        <div class="box">
+            <b>Map</b><br><br>
+            Schlüssel-Wert-Paare<br><br>
+            <table>
+                <tr>
+                    <td>let map = new Map();</td>
+                    <td>Map deklarieren</td>
+                </tr>
+                <tr>
+                    <td>map.set(schlüssel, wert);</td>
+                    <td>fügt Paar hinzu</td>
+                </tr>
+                <tr>
+                    <td>map.get(schlüssel);</td>
+                    <td>gibt Wert zu Schlüssel zurück</td>
+                </tr>
+                <tr>
+                    <td>map.has(schlüssel);</td>
+                    <td>ist schlüssel enthalten?</td>
+                </tr>
+                <tr>
+                    <td>map.delete(schlüssel);</td>
+                    <td>löscht Eintrag</td>
+                </tr>
+                <tr>
+                    <td>map.clear();</td>
+                    <td>löscht alle Einträge</td>
+                </tr>
+                <tr>
+                    <td>map.size();</td>
+                    <td>Anzahl der Paare</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="box">
+            <strong>WeakMaps</strong> sind ähnlich wie Maps,
+            <br>können aber nur Objekte aufnehmen.
+        </div>
+
+        <div class="box">
+            <b>Set</b><br><br>
+            weder Indizes noch Schlüsselbegriffe<br>
+            keine Ordnung<br><br>
+            <table>
+                <tr>
+                    <td>let set = new Set();</td>
+                    <td>Map deklarieren</td>
+                </tr>
+                <tr>
+                    <td>let set = new Set(arr);</td>
+                    <td>macht aus Array ein Set</td>
+                </tr>
+                <tr>
+                    <td>set.add(wert);</td>
+                    <td>fügt Wert hinzu</td>
+                </tr>
+                <tr>
+                    <td>set.has(wert);</td>
+                    <td>ist wert enthalten?</td>
+                </tr>
+                <tr>
+                    <td>set.delete(wert);</td>
+                    <td>löscht Eintrag</td>
+                </tr>
+                <tr>
+                    <td>set.clear();</td>
+                    <td>löscht alle Einträge</td>
+                </tr>
+                <tr>
+                    <td>set.size();</td>
+                    <td>Anzahl der Elemente</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="box">
+            <strong>WeakSets</strong> sind ähnlich wie Sets,
+            <br>können aber nur Objekte aufnehmen.
+        </div>
+    </main>
+    <footer>
+        <section>
+            <b>Referenz</b> f&uuml;r vorgefertigte Objekte und Methoden:
+            <a href="https://bmu-verlag.de/js3" />https://bmu-verlag.de/js3</a>
+        </section>
+    </footer>
+</body>
+
+</html>

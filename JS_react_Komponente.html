@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title> JS - React Komponenten </title>
+  <link rel="stylesheet" type="text/css" href="style_js.css">
+  <style>
+    ul {
+      list-style: disc;
+      text-indent: 0px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="JS.png">
+    <nav>
+      <div>
+        <a href="html_Allgemeines.html">HTML</a>
+        <a href="css_Allgemeines.html">CSS</a>
+        <a href="JS_Allgemeines.html"><strong>JavaScript</strong></a>
+        <a href="python_Allgemeines.html">Python</a>
+        <a href="ruby_Allgemeines.html">Ruby</a>
+        <a href="terminal.html">Terminal</a>
+        <a href="git.html">Git</a>
+        <a href="Abkuerzungen.html">Abk&uuml;rzungen</a>
+      </div><br>
+      <div>
+        <a href="JS_Allgemeines.html">Allgemeines</a>
+        <a href="JS_Variablen.html">Datentypen</a>
+        <a href="JS_if_else.html">Strukturen</a>
+        <a href="JS_OO.html">Klassen und Objekte</a><br>
+        <a href="JS_in_html.html">JavaScript im Browser</a>
+        <a href="JS_Fehlerbehandlung.html">Fehlerbehandlung</a>
+        <a href="JS_react.html"><strong>React</strong></a>
+      </div><br>
+      <div>
+        <a href="JS_react.html">Allgemeines</a>
+        <a href="JS_react_GetStarted.html">Getting Started</a>
+        <a href="JS_react_Komponente.html"><strong>Komponenten</strong></a>
+        <a href="JS_react_props.html">Datenaustausch</a><br>
+        <a href="JS_react_useState.html">useState</a>
+        <a href="JS_react_useEffect.html">useEffect</a>
+        <a href="JS_react_useContext.html">useContext</a>
+        <a href="JS_react_useCallback.html">useCallback</a>
+        <a href="JS_react_useRef.html">useRef</a>
+        <a href="JS_react_native.html">React Native</a>
+      </div>
+    </nav>
+    <img src="JS.png">
+  </header>
+  <main>
+    <div class="box">
+      <h4>Komponente</h4>
+      <p class="code">
+        import React, { useState, useEffect } from "react";<br>
+        import Komponentenname2 from "./Komponentenname2";<br><br>
+        function Komponentenname(props) {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;const {variable1, variable2} = props;<br><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;const Funktionsname = () => {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;};<br><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;return (<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;/div&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;);<br>
+        }</p>
+      <p class="code">export default Komponentenname;</p>
+    </div>
+    <div class="box">
+      <h4>Einbinden einer Komponente</h4>
+      <p class="code">&lt;Komponentenname prop1="value" prop2={variable} /&gt;</p>
+    </div>
+    <div class="box">
+      <h4>Komponenten</h4>
+      <p>React Komponenten sind reguläre JavaScript-Funktionen.
+        Ihre Namen müssen aber groß geschrieben werden (PascalCase) damit sie funktionieren.</p>
+      <p><span class="code">export default</span> muss genutzt werden, wenn die Komponente in anderen Dateien genutzt
+        werden soll.</p>
+    </div>
+  </main>
+</body>
+
+</html>

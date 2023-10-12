@@ -1,0 +1,222 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title> css - Display </title>
+    <link rel="stylesheet" type="text/css" href="style_css.css">
+</head>
+
+<body>
+    <header>
+        <img src="css3.png">
+        <nav>
+            <div>
+                <a href="html_Allgemeines.html">HTML</a>
+                <a href="css_Allgemeines.html"><strong>CSS</strong></a>
+                <a href="JS_Allgemeines.html">JavaScript</a>
+                <a href="python_Allgemeines.html">python</a>
+                <a href="ruby_Allgemeines.html">ruby</a>
+                <a href="terminal.html">Terminal</a>
+                <a href="git.html">Git</a>
+                <a href="Abkuerzungen.html">Abk&uuml;rzungen</a>
+                <br><br>
+            </div>
+            <div>
+                <a href="css_Allgemeines.html">Allgemeines</a>
+                <a href="css_css_in_html.html">CSS in HTML</a>
+                <a href="css_Hintergrund.html">Hintergrund</a>
+                <a href="css_Text.html">Text</a>
+                <a href="css_Rahmen_&_Abstand.html">Rahmen und Abstand</a>
+                <a href="css_Position.html">Position</a>
+                <br>
+            </div>
+            <div>
+                <a href="css_Display.html"><strong>Display</strong></a>
+                <a href="css_ButtonDesign.html">Button Design</a>
+                <a href="css_Overflowing_Content.html">Overflowing Content</a>
+                <a href="css_Pseudoklassen.html">Pseudoklassen</a>
+                <a href="css_Media_Queries.html">Media Queries</a>
+                <br><br>
+            </div>
+            <div>
+                <a href="css_Display.html">Allgemeines</a>
+                <a href="css_Flexbox.html"><strong>Flexbox</strong></a>
+                <a href="css_Grid.html">Grid</a>
+            </div>
+        </nav>
+        <img src="css3.png">
+    </header>
+    <main>
+        <div class="box">
+            <h3>Container</h3>
+            <table>
+                <tr>
+                    <td>display: flex;</td>
+                    <td>Flex wird zur Anordnung der Elemente genutzt. Der komplette Container wird genutzt.</td>
+                </tr>
+                <tr>
+                    <td>flex-direction: column/row;</td>
+                    <td>Anordnung in einer Spalte oder in einer Reihe</td>
+                </tr>
+                <tr>
+                    <td>flex-wrap: wrap;</td>
+                    <td>Elemente werden in verschiedenen Reihen oder Spalten angezeigt.</td>
+                </tr>
+                <tr>
+                    <td>justify-content: center;</td>
+                    <td>horizontale Ausrichtung</td>
+                </tr>
+                <tr>
+                    <td>align-items: center;</td>
+                    <td>vertikale Ausrichtung</td>
+                </tr>
+                <tr>
+                    <td>align-content: center;</td>
+                    <td>Anordnung von Zeilen</td>
+                </tr>
+                <tr>
+                    <td>flex-flow: column wrap;</td>
+                    <td>Kombiniert flex-direction und flex-wrap</td>
+                </tr>
+            </table>
+        </div>
+        <div class="box">
+            <h3>flex-direction</h3>
+            <table>
+                <tr>
+                    <td>flex-direction: row;</td>
+                    <td>Ausrichtung in einer Reihe</td>
+                </tr>
+                <tr>
+                    <td>flex-direction: row-reverse;</td>
+                    <td>umgekehrte Ausrichtung in einer Reihe</td>
+                </tr>
+                <tr>
+                    <td>flex-direction: column;</td>
+                    <td>Ausrichtung in einer Spalte</td>
+                </tr>
+                <tr>
+                    <td>flex-direction: column-reverse;</td>
+                    <td>umgekehrte Ausrichtung in einer Spalte</td>
+                </tr>
+            </table>
+        </div>
+        <div class="box">
+            <h3>flex-wrap</h3>
+            <table>
+                <tr>
+                    <td>flex-wrap: wrap;</td>
+                    <td>Elemente werden in verschiedenen Zeilen angezeigt.</td>
+                </tr>
+                <tr>
+                    <td>flex-wrap: nowrap;</td>
+                    <td>Alle Elemente sind in einer Zeile.</td>
+                </tr>
+                <tr>
+                    <td>flex-wrap: wrap-reverse;</td>
+                    <td>Reihenfolge wird umgedreht. Die Elemente werden in verschiedenen Zeilen angezeigt.</td>
+                </tr>
+            </table>
+        </div>
+        <div class="box">
+            <h3>justify-content</h3>
+            <table>
+                <tr>
+                    <td>justify-content: flex-start;</td>
+                    <td>Ausrichtung links</td>
+                </tr>
+                <tr>
+                    <td>justify-content: flex-end;</td>
+                    <td>Ausrichtung rechts</td>
+                </tr>
+                <tr>
+                    <td>justify-content: center;</td>
+                    <td>Ausrichtung mittig</td>
+                </tr>
+                <tr>
+                    <td>justify-content: space between;</td>
+                    <td>Ausrichtung mit identischem Abstand zwischen den Elementen</td>
+                </tr>
+                <tr>
+                    <td>justify-content: space-around;</td>
+                    <td>Ausrichtung mit identischem Element-Margins</td>
+                </tr>
+            </table>
+        </div>
+        <div class="box">
+            <h3>align-items</h3>
+            <table>
+                <tr>
+                    <td>align-items: flex-start;</td>
+                    <td>Ausrichtung oben</td>
+                </tr>
+                <tr>
+                    <td>align-items: flex-end;</td>
+                    <td>Ausrichtung unten</td>
+                </tr>
+                <tr>
+                    <td>align-items: center;</td>
+                    <td>Ausrichtung mittig</td>
+                </tr>
+                <tr>
+                    <td>align-items: baseline;</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>align-items: stretch;</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="box">
+            <h3>align-content</h3>
+            <table>
+                <tr>
+                    <td>align-content: flex-start;</td>
+                    <td>Ausrichtung oben</td>
+                </tr>
+                <tr>
+                    <td>align-content: flex-end;</td>
+                    <td>Ausrichtung unten</td>
+                </tr>
+                <tr>
+                    <td>align-content: center;</td>
+                    <td>Ausrichtung mittig</td>
+                </tr>
+                <tr>
+                    <td>align-content: space-between;</td>
+                    <td>Ausrichtung mit identischem Abstand zwischen den Zeilen</td>
+                </tr>
+                <tr>
+                    <td>align-content: space-around;</td>
+                    <td>Ausrichtung mit identischem Abstand zwischen den Elementen</td>
+                </tr>
+                <tr>
+                    <td>align-content: stretch;</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="box">
+            <h3>Elemente</h3>
+            <table>
+                <tr>
+                    <td>align-self:</td>
+                    <td>Kann dieselben Werte wie align-items annehmen.</td>
+                </tr>
+                <tr>
+                    <td>order: 1;</td>
+                    <td>Standardwert ist 0. Kann auch negative Werte annehmen.</td>
+                </tr>
+                <tr>
+                    <td>flex: 1;</td>
+                    <td>Durch unterschiedliche Zahlen können die Größenverhältnisse der Elemente zueinander dargestellt
+                        werden.</td>
+                </tr>
+            </table>
+        </div>
+    </main>
+</body>
+
+</html>

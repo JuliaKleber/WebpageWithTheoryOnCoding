@@ -1,0 +1,198 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title> JS - React Komponenten </title>
+    <link rel="stylesheet" type="text/css" href="style_js.css">
+    <style>
+        ul {
+            list-style: disc;
+            text-indent: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="JS.png">
+        <nav>
+            <div>
+                <a href="html_Allgemeines.html">HTML</a>
+                <a href="css_Allgemeines.html">CSS</a>
+                <a href="JS_Allgemeines.html"><strong>JavaScript</strong></a>
+                <a href="python_Allgemeines.html">Python</a>
+                <a href="ruby_Allgemeines.html">Ruby</a>
+                <a href="terminal.html">Terminal</a>
+                <a href="git.html">Git</a>
+                <a href="Abkuerzungen.html">Abk&uuml;rzungen</a>
+            </div><br>
+            <div>
+                <a href="JS_Allgemeines.html">Allgemeines</a>
+                <a href="JS_Variablen.html">Datentypen</a>
+                <a href="JS_if_else.html">Strukturen</a>
+                <a href="JS_OO.html">Klassen und Objekte</a><br>
+                <a href="JS_in_html.html">JavaScript im Browser</a>
+                <a href="JS_Fehlerbehandlung.html">Fehlerbehandlung</a>
+                <a href="JS_react.html"><strong>React</strong></a>
+            </div><br>
+            <div>
+                <a href="JS_react.html">Allgemeines</a>
+                <a href="JS_react_GetStarted.html">Getting Started</a>
+                <a href="JS_react_Komponente.html">Komponenten</a>
+                <a href="JS_react_props.html">Datenaustausch</a><br>
+                <a href="JS_react_useState.html">useState</a>
+                <a href="JS_react_useEffect.html">useEffect</a>
+                <a href="JS_react_useContext.html"><strong>useContext</strong></a>
+                <a href="JS_react_useCallback.html">useCallback</a>
+                <a href="JS_react_useRef.html">useRef</a>
+                <a href="JS_react_native.html">React Native</a>
+            </div>
+        </nav>
+        <img src="JS.png">
+    </header>
+    <main>
+        <div class="box">
+            <h4>useContext</h4>
+            <p class="code">
+                useContext ist ein Hook in React, der es ermöglicht, den Context in Funktionalkomponenten zu verwenden,
+                um Daten an Komponenten weiterzugeben, ohne die Prop-Bohrer-Methode (Prop Drilling) zu verwenden.
+                Context ist ein Mechanismus in React, der es Ihnen ermöglicht, Daten an Komponenten in einer
+                Baumstruktur weiterzugeben, ohne Props manuell durch alle Zwischenebenen zu übergeben.
+
+                Hier ist eine grundlegende Erklärung, wie useContext in React funktioniert:
+
+                Context erstellen: Zuerst müssen Sie einen Context erstellen. Dies wird normalerweise in einem eigenen
+                Modul oder in der Nähe des Wurzelkomponentenbaums Ihrer Anwendung gemacht. Zum Beispiel:
+
+                jsx
+
+                import React, { createContext } from 'react';
+
+                // Erstellen Sie den Context
+                const MyContext = createContext();
+
+                Provider-Komponente: Sie müssen eine Provider-Komponente erstellen, die den Wert (die Daten), die Sie
+                teilen möchten, über den Context bereitstellt. Dies geschieht normalerweise in einer höheren Komponente
+                in Ihrer Baumstruktur:
+
+                jsx
+
+                function MyProvider({ children }) {
+                const sharedData = 'Diese Daten werden geteilt';
+
+                return (
+                <MyContext.Provider value={sharedData}>
+                    {children}
+                </MyContext.Provider>
+                );
+                }
+
+                useContext in einer Komponente verwenden: Nun können Sie useContext in jeder Ihrer Komponenten
+                verwenden, um auf die geteilten Daten zuzugreifen, ohne diese über Props weitergeben zu müssen:
+
+                jsx
+
+                import React, { useContext } from 'react';
+
+                function MyComponent() {
+                const data = useContext(MyContext);
+
+                return
+            <div>{data}</div>;
+            }
+
+            Provider verwenden: Schließlich müssen Sie sicherstellen, dass Ihre MyProvider-Komponente in Ihrer
+            Anwendungsstruktur eingebunden ist, damit die darunterliegenden Komponenten auf den Context zugreifen
+            können. Normalerweise wird dies im Wurzel- oder App-Komponentenbaum Ihrer Anwendung gemacht.
+
+            jsx
+
+            function App() {
+            return (
+            <MyProvider>
+                <MyComponent />
+            </MyProvider>
+            );
+            }
+
+            Mit useContext können Sie Daten effizient zwischen Komponenten weitergeben, ohne Prop-Bohrung oder tiefes
+            Verschachteln von Komponenten. Es ist besonders nützlich, wenn Sie Daten wie
+            Authentifizierungsinformationen, Themen, Lokalisierungsinformationen oder andere global benötigte
+            Informationen teilen müssen.
+            User
+            Kann man die Daten in einer der Kind/Kindeskinder-Komponenten ändern so dass sie global für alle Komponenten
+            geändert werden?
+            ChatGPT
+
+            Nein, Sie sollten die in einem Context gespeicherten Daten nicht direkt in einer der Kind- oder
+            Kindeskinder-Komponenten ändern, um sie global für alle Komponenten zu aktualisieren. Die Daten, die in
+            einem Context gespeichert sind, sollten als "read-only" betrachtet werden, und Änderungen an ihnen sollten
+            durch den Context-Provider verwaltet werden.
+
+            Wenn Sie die in einem Context gespeicherten Daten aktualisieren müssen, sollten Sie dies über den
+            Context-Provider tun. Hier ist eine allgemeine Vorgehensweise, wie Sie dies erreichen können:
+
+            Erstellen Sie eine Funktion zum Aktualisieren der Daten: Erstellen Sie im Context-Modul eine Funktion, die
+            verwendet wird, um die Daten zu aktualisieren. Diese Funktion wird normalerweise im
+            Provider-Komponentenmodul definiert.
+
+            jsx
+
+            // MyContext.js
+
+            import { createContext, useState } from 'react';
+
+            const MyContext = createContext();
+
+            export function MyProvider({ children }) {
+            const [data, setData] = useState('Anfangsdaten');
+
+            // Funktion zum Aktualisieren der Daten
+            const updateData = newData => {
+            setData(newData);
+            };
+
+            return (
+            <MyContext.Provider value={{ data, updateData }}>
+                {children}
+            </MyContext.Provider>
+            );
+            }
+
+            export default MyContext;
+
+            Verwenden Sie den Aktualisierungsfunktions-Context in Komponenten: In den Kind- oder
+            Kindeskinder-Komponenten können Sie den Aktualisierungsfunktions-Context verwenden, um die Daten zu
+            aktualisieren.
+
+            jsx
+
+            import React, { useContext } from 'react';
+            import MyContext from './MyContext';
+
+            function MyComponent() {
+            const { data, updateData } = useContext(MyContext);
+
+            const handleClick = () => {
+            // Aktualisieren der Daten über die Funktion im Context
+            updateData('Neue Daten');
+            };
+
+            return (
+            <div>
+                <p>{data}</p>
+                <button onClick={handleClick}>Daten aktualisieren</button>
+            </div>
+            );
+            }
+
+            Auf diese Weise können Sie die in einem Context gespeicherten Daten aktualisieren und sicherstellen, dass
+            alle Komponenten, die diesen Context verwenden, die aktualisierten Daten sehen. Es ist wichtig zu beachten,
+            dass der Aktualisierungsvorgang durch den Provider gesteuert wird, um sicherzustellen, dass die
+            Aktualisierung global für alle Komponenten erfolgt.</p>
+        </div>
+    </main>
+</body>
+
+</html>

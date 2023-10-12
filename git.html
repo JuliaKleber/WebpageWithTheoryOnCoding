@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>git</title>
+  <link rel="stylesheet" type="text/css" href="style_git.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="html_Allgemeines.html">HTML</a>
+      <a href="css_Allgemeines.html">CSS</a>
+      <a href="JS_Allgemeines.html">JavaScript</a>
+      <a href="python_Allgemeines.html">Python</a>
+      <a href="ruby_Allgemeines.html">Ruby</a>
+      <a href="terminal.html">Terminal</a>
+      <a href="git.html"><strong>Git</strong></a>
+      <a href="Abkuerzungen.html">Abkürzungen</a>
+    </nav>
+    <img src="git.png">
+  </header>
+  <main>
+    <div class="box">
+      <p><strong>Git</strong> ist eine freie Software zur verteilten
+        Versionsverwaltung von Dateien,
+        die durch Linus Torvalds 2005 initiiert wurde.</p>
+      <p><strong>GitHub</strong> hat über 80 Mio Nutzer und ist von Microsoft.</p>
+    </div>
+    <div class="box">
+      <h4>Begriffe</h4>
+      <table>
+        <tr>
+          <td>Working Tree / untracked area</td>
+          <td>Dort arbeitet man gerade.</td>
+        </tr>
+        <tr>
+          <td>Branches</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Staging Area</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>commits</td>
+          <td>gespeicherte Änderungen</td>
+        </tr>
+        <tr>
+          <td>Pull Request</td>
+          <td>Informiert andere Entwickler darüber,
+            dass es einen Branch mit Änderungen gibt.</td>
+        </tr>
+      </table>
+    </div>
+    <div class="box">
+      <h4>Befehle</h4>
+      <table>
+        <tr>
+          <td>git init [repository name]</td>
+          <td>Erstellt ein leeres Git Repository.</td>
+        </tr>
+        <tr>
+          <td>git remote add origin [repository url]</td>
+          <td>Erstellt Verknüpfung zum remote Repository</td>
+        </tr>
+        <tr>
+          <td>git push -u origin master</td>
+          <td>Lädt Dateien ins remote repository.</td>
+        </tr>
+        <tr>
+          <td>git status / gst</td>
+          <td>Zeigt an, was sich im Working Tree befindet.</td>
+        </tr>
+        <tr>
+          <td>git add</td>
+          <td>Überträgt die Änderungen aus dem lokalen Repository zur Staging Area.</td>
+        </tr>
+        <tr>
+          <td>git commit -m "Kommentar"</td>
+          <td>Überträgt den Snapshot aus der Staging Area ins remote Repository.</td>
+        </tr>
+        <tr>
+          <td>git pull</td>
+          <td>Damit kann man einen Branch aus einem
+            remote Repository lokal speichern.</td>
+        </tr>
+        <tr>
+          <td>git merge</td>
+          <td>Führt verschiedene Branches zusammen.</td>
+        </tr>
+        <tr>
+          <td>git config -global user.name "[name]"</td>
+          <td>Definiert den Namen des Urhebers der Commits.</td>
+        </tr>
+        <tr>
+          <td>git config -global user.email "[email address]"</td>
+          <td>Definiert die Email-Adresse, die mit den Commits genutzt werden soll.</td>
+        </tr>
+        <tr>
+          <td>git clone [url]</td>
+          <td>Kopie eines Repositories wird erstellt.</td>
+        </tr>
+        <tr>
+          <td>git reset [file]</td>
+          <td>Änderungen werden rückgängig gemacht.</td>
+        </tr>
+        <tr>
+          <td>git reset [commit]</td>
+          <td>Änderungen werden rückgängig gemacht.</td>
+        </tr>
+        <tr>
+          <td>git checkout [branch name]</td>
+          <td>Wechselt zwischen verschiedenen Branches.</td>
+        </tr>
+        <tr>
+          <td>git checkout -b [branch name]</td>
+          <td>Erstellt neuen Branch und wechselt zu diesem.</td>
+        </tr>
+        <tr>
+          <td>git log</td>
+          <td>zeigt die bisherigen commits an</td>
+        </tr>
+        <tr>
+          <td>git diff commitname</td>
+          <td>zeigt die Änderungen</td>
+        </tr>
+      </table>
+    </div>
+    <div class="box">
+      <h4>1. Commit zu GitHub</h4>
+      <table>
+        <tr>
+          <td>git init</td>
+          <td>
+            Erstellt ein leeres Git Repository.</td>
+        </tr>
+        <tr>
+          <td>git add * / git add .</td>
+          <td>Fügt alle Dateien im Verzeichnis hinzu.</td>
+        </tr>
+        <tr>
+          <td>git commit -m "first commit"</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>git branch -M main</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>git remote add origin https://github.com/GoldieCrystal/Mastermind.git
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>git push -u origin main</td>
+          <td>Bei Passwort das Token eingeben.</td>
+        </tr>
+      </table>
+    </div>
+    <div class="box">
+      <h4>2. Commit zu GitHub</h4>
+      <table>
+        <tr>
+          <td>git add .</td>
+          <td>Fügt alle Dateien im Verzeichnis hinzu</td>
+        </tr>
+        <tr>
+          <td>git commit -m "second commit"</td>
+          <td>Änderungen werden lokal gespeichert</td>
+        </tr>
+        <tr>
+          <td>git push origin master</td>
+          <td>Die Änderungen werden auf github (origin) gespeichert</td>
+        </tr>
+      </table>
+    </div>
+    </section>
+  </main>
+</body>
+
+</html>

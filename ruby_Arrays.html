@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title> Ruby - Arrays </title>
+    <link rel="stylesheet" type="text/css" href="style_ruby.css">
+</head>
+
+<body>
+    <header>
+        <img src="ruby.png">
+        <nav>
+            <div>
+                <a href="html_Allgemeines.html">HTML</a>
+                <a href="css_Allgemeines.html">CSS</a>
+                <a href="JS_Allgemeines.html">JavaScript</a>
+                <a href="python_Allgemeines.html">Python</a>
+                <a href="ruby_Allgemeines.html"><strong>Ruby</strong></a>
+                <a href="terminal.html">Terminal</a>
+                <a href="git.html">Git</a>
+                <a href="Abkuerzungen.html">Abkürzungen</a>
+            </div><br>
+            <div>
+                <a href="ruby_Allgemeines.html">Allgemeines</a>
+                <a href="ruby_Variablen.html"><strong>Datentypen</strong></a>
+                <a href="ruby_if_else.html">Strukturen</a>
+                <a href="ruby_OO.html">Klassen und Objekte</a><br>
+                <a href="ruby_Fehlerbehandlung.html">Fehlerbehandlung</a>
+            </div><br>
+            <div>
+                <a href="ruby_Variablen.html">Variablen</a>
+                <a href="ruby_Zahlen.html">Zahlen</a>
+                <a href="ruby_Boolean.html">Boolean</a>
+                <a href="ruby_Strings.html">Strings</a>
+                <a href="ruby_Arrays.html"><strong>Arrays</strong></a>
+                <a href="ruby_Range.html">Range</a>
+            </div>
+        </nav>
+        <img src="ruby.png">
+    </header>
+    <main>
+      <div class="box">
+        <b>Erstellung von Arrays</b><br><br>
+        Arrays können Elemente unterschiedlichen Datentyps beinhalten<br>
+        <p>Erstellung eines Arrays mit Strings: %w[a, b, c]<br>
+          So müssen keine Anführungszeichen gesetzt werden.</p>
+        </div>
+        <div class="box">
+            <b>Methoden für Arrays</b><br><br>
+            <table>
+              <tr>
+                <td>arr[i]</td>
+                <td>Zugriff auf i-te Element, Start bei 0</td>
+              </tr>
+              <tr>
+                <td>arr.min</td>
+                <td>gibt das kleinste Element zurück</td>
+              </tr>
+
+              <tr>
+                <td>arr.length</td>
+                <td>Anzahl Elemente des Arrays</td>
+              </tr>
+              <tr>
+                <td>arr.size</td>
+                <td>Anzahl Elemente des Arrays</td>
+              </tr>
+              <tr>
+                <td>arr.count</td>
+                <td>Anzahl Elemente des Arrays</td>
+              </tr>
+              <tr>
+                <td>arr.sort</td>
+                <td>Elemente im Array sortieren, bei Strings erst Großbuchstaben</td>
+              </tr>
+              <tr>
+                <td>arr.sort.reverse</td>
+                <td>Elemente im Array in umgekehrter Reigenfolge sortieren</td>
+              </tr>
+              <tr>
+                <td>arr.join(", ")</td>
+                <td>gibt einen String zurück</td>
+              </tr>
+              <tr>
+                <td>+</td>
+                <td>zwei Arrays werden zu einem Array zusammengeführt</td>
+              </tr>
+              <tr>
+                <td>shuffle</td>
+                <td>Reihenfolge der Elemente wird nach dem Zufallsprinzip verändert</td>
+              </tr>
+              <tr>
+                <td>sample(sample_size)</td>
+                <td>Ein zufälliges Subarray mit der sample_size wird generiert</td>
+              </tr>
+              <tr>
+                <td class="code">[[1, 3], [4, 2]][0][1]</td>
+                <td>= 3</td>
+              </tr>
+            </table><br><br>
+            </div>
+            <div class="box">
+              <b>Methoden für Arrays???</b><br><br>
+            <table>
+                <tr>
+                    <td>let arr = [wert1, wert2];</td>
+                    <td>Erstellen eines Arrays</td>
+                </tr>
+
+                <tr>
+                    <td>arr[arr.length] = wert;</td>
+                    <td>Element am Ende hinzufügen</td>
+                </tr>
+                <tr>
+                    <td>arr.push(wert);</td>
+                    <td>Element am Ende hinzufügen</td>
+                </tr>
+                <tr>
+                    <td>arr.unshift(wert);</td>
+                    <td>Element am Anfang hinzufügen</td>
+                </tr>
+                <tr>
+                    <td>arr.shift();</td>
+                    <td>Element am Ende entfernen</td>
+                </tr>
+                <tr>
+                    <td>arr.pop();</td>
+                    <td>Element am Ende entfernen</td>
+                </tr>
+                <tr>
+                    <td>arr.includes("text");</td>
+                    <td>true, wenn "text" in Array enthalten ist</td>
+                </tr>
+                <tr>
+                    <td>arr.splice(i, n);</td>
+                    <td>n Elemente von i an werden aus dem Array gelöscht.</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="box">
+            <h4>array.map()</h4>
+            <p class="code">array_new = array.map { |element| element.length}</p>
+            <p>Es wird ein neues Array auf Grundlage eines alten Arrays erstellt
+                <br>indem auf den Elementen des alten Arrays eine Funktion aufgerufen wird.
+            </p>
+        </div>
+
+        <div class="box">
+          <h4>array.filter()</h4>
+        </div>
+
+    </main>
+    <footer>
+      <section>
+        <b>Referenz</b> für vorgefertigte Objekte und Methoden:
+        <a href="https://ruby-doc.org/core-3.0.0/Array.html">https://ruby-doc.org/core-3.0.0/Array.html</a>
+        <a href="https://ruby-doc.org/3.2.2/Enumerable.html">https://ruby-doc.org/3.2.2/Enumerable.html</a>
+      </section>
+    </footer>
+</body>
+
+</html>

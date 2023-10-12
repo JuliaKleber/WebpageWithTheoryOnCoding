@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title> JS - React - props </title>
+  <link rel="stylesheet" type="text/css" href="style_js.css">
+  <style>
+    ul {
+      list-style: disc;
+      text-indent: 0px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="JS.png">
+    <nav>
+      <div>
+        <a href="html_Allgemeines.html">HTML</a>
+        <a href="css_Allgemeines.html">CSS</a>
+        <a href="JS_Allgemeines.html"><strong>JavaScript</strong></a>
+        <a href="python_Allgemeines.html">Python</a>
+        <a href="ruby_Allgemeines.html">Ruby</a>
+        <a href="terminal.html">Terminal</a>
+        <a href="git.html">Git</a>
+        <a href="Abkuerzungen.html">Abk&uuml;rzungen</a>
+      </div><br>
+      <div>
+        <a href="JS_Allgemeines.html">Allgemeines</a>
+        <a href="JS_Variablen.html">Datentypen</a>
+        <a href="JS_if_else.html">Strukturen</a>
+        <a href="JS_OO.html">Klassen und Objekte</a><br>
+        <a href="JS_in_html.html">JavaScript im Browser</a>
+        <a href="JS_Fehlerbehandlung.html">Fehlerbehandlung</a>
+        <a href="JS_react.html"><strong>React</strong></a>
+      </div><br>
+      <div>
+        <a href="JS_react.html">Allgemeines</a>
+        <a href="JS_react_GetStarted.html">Getting Started</a>
+        <a href="JS_react_Komponente.html">Komponenten</a>
+        <a href="JS_react_props.html"><strong>Datenaustausch</strong></a><br>
+        <a href="JS_react_useState.html">useState</a>
+        <a href="JS_react_useEffect.html">useEffect</a>
+        <a href="JS_react_useContext.html">useContext</a>
+        <a href="JS_react_useCallback.html">useCallback</a>
+        <a href="JS_react_useRef.html">useRef</a>
+        <a href="JS_react_native.html">React Native</a>
+      </div>
+    </nav>
+    <img src="JS.png">
+  </header>
+  <main>
+    <div class="box">
+      <h4>props</h4>
+      <ul>
+        <li>properties</li>
+        <li>unveränderlich</li>
+        <li>props helfen Daten zwischen den React-Komponenten auszutauschen</li>
+        <li>Zugriff: props.propName</li>
+        <li>props können überschrieben werden:</li>
+        <li style="list-style-type: none">let component = &lt;Component {...props} propName={"value"} /&gt;;</li>
+        <li>Es können Standardwerte für einzelne props mit der Methode defaultProps definiert werden:</li>
+        <li style="list-style-type: none">component.defaultProps = {propName: value}</li>
+
+      </ul>
+    </div>
+    <div class="box">
+      <h4>PropTypes</h4>
+      <p>PropTypes oder Typescript sollten genutzt werden
+        damit keine props vom falschen Typ an die Komponenten
+        übergeben werden und somit Fehler verursacht werden.</p>
+      <p class="code">import {PropTypes} from prop-types</p>
+      <p class="code">Person.propTypes = {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;name: PropTypes.string.isRequired,<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;age: PropTypes.number<br>
+        };
+      </p>
+    </div>
+    <div class="box">
+      <h4>Werte von Kindern an Eltern übergeben</h4>
+      <p class="code">
+        const handleName = (value) => {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;setValue(value);<br>
+        };<br><br>
+        &lt;Funktionsname onName={handleName} /&gt;<br>
+        &lt;Funktionsname onName={() => handleName(value)} /&gt;</p><br>
+      <p class="code">
+        const handleName = useCallback((value) => {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;setValue(value);<br>
+        }, []);<br><br>
+        &lt;Funktionsname onName={handleName} /&gt;<br>
+        &lt;Funktionsname onName={() => handleName(value)} /&gt;</p><br>
+      <p>Die erste Option wird verwendet, wenn die Leistung nicht entscheidend ist.<br>
+        Ansonsten wird die zweite Option verwendet.</p>
+    </div>
+  </main>
+</body>
+
+</html>

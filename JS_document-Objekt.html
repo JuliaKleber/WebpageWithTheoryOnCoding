@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title> JS - document-Objekt </title>
+	<link rel="stylesheet" type="text/css" href="style_js.css">
+	<style>
+		p {
+			font-family: courier new;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<img src="JS.png">
+		<nav>
+			<div>
+				<a href="html_Allgemeines.html">HTML</a>
+				<a href="css_Allgemeines.html">CSS</a>
+				<a href="JS_Allgemeines.html"><strong>JavaScript</strong></a>
+				<a href="python_Allgemeines.html">Python</a>
+				<a href="ruby_Allgemeines.html">Ruby</a>
+				<a href="terminal.html">Terminal</a>
+				<a href="git.html">Git</a>
+				<a href="Abkuerzungen.html">Abk&uuml;rzungen</a>
+			</div><br>
+			<div>
+				<a href="JS_Allgemeines.html">Allgemeines</a>
+				<a href="JS_Variablen.html">Datentypen</a>
+				<a href="JS_if_else.html">Strukturen</a>
+				<a href="JS_OO.html">Klassen und Objekte</a>
+				<a href="JS_in_html.html"><strong>JavaScript im Browser</strong></a>
+				<a href="JS_Fehlerbehandlung.html">Fehlerbehandlung</a>
+				<a href="JS_react.html">React</a>
+			</div><br>
+			<div>
+				<a href="JS_in_html.html">JavaScript in HTML</a>
+				<a href="JS_Browser_Events.html">Browser Events</a>
+				<a href="JS_window-Objekt.html">window-Objekt</a>
+				<a href="JS_document-Objekt.html"><strong>document-Objekt</strong></a>
+				<a href="JS_Formulare.html">Formulare</a>
+				<a href="JS_canvas.html">Canvas</a>
+				<a href="JS_toggle_fade_slide.html">Toggle, Fade & Slide</a>
+				<a href="JS_Zeitverzoegerung.html">Zeitverzögerung</a>
+			</div>
+		</nav>
+		<img src="JS.png">
+	</header>
+	<main>
+		<div class="box">
+			<h3>DOM-Baum</h3>
+			<p style="font-family: arial"> Der DOM-Baum besteht aus Knoten, Kindern und Geschwistern.<br>
+				Das Ursprungselement ist das document-Element.
+			</p>
+			<p>
+				document.body.firstElementChild.nextElementSibling<br>
+				document.body.lastElementChild.previousElementSibling<br>
+			</p>
+			<p style="font-family: arial"> Damit kann jedes Element der Seite angesteuert werden.</p>
+		</div>
+		<div class="box">
+			<h4>class</h4>
+			<table>
+				<tr>
+					<td>HTML</td>
+					<td style="font-family: new courier">&lt;h1 class="header1"&gt;&lt;h1&gt;</td>
+				</tr>
+				<tr>
+					<td>Javascript</td>
+					<td style="font-family: new courier">document.getElementByClassName("header1").innerText =
+						"Überschrift1";</td>
+				</tr>
+				<tr>
+					<td>Javascript</td>
+					<td style="font-family: new courier">document.getElementsByClassName("header1").innerText =
+						"Überschrift1";</td>
+				</tr>
+			</table>
+			<p style="font-family: arial">getElementByClassName gibt das erste Element oder null zurück, falls es keins
+				mit dem CSS-Selector gibt.<br>
+				getElementsByClass gibt alle entsprechenden Elemente zurück.
+			</p>
+		</div>
+		<div class="box">
+			<h4>id-Attribut</h4>
+			<table>
+				<tr>
+					<td>HTML</td>
+					<td style="font-family: new courier">&lt;h1 id="header1"&gt;&lt;h1&gt;</td>
+				</tr>
+				<tr>
+					<td>Javascript</td>
+					<td style="font-family: new courier">document.getElementById("header1").innerText = "Überschrift1";
+					</td>
+				</tr>
+			</table>
+			<p style="font-family: arial">Gibt das Element mit der id "header1" zurück.</p>
+		</div>
+		<div class="box">
+			<h4>querySelector</h4>
+			<table>
+				<tr>
+					<td>Javascript</td>
+					<td style="font-family: new courier">document.querySelector(#idName);</td>
+				</tr>
+				<tr>
+					<td>Javascript</td>
+					<td style="font-family: new courier">document.querySelectorAll(.className);</td>
+				</tr>
+			</table>
+			<p style="font-family: arial">querySelector gibt das erste Element oder null zurück, falls es keins mit dem
+				CSS-Selector gibt.<br>
+				querySelectorAll gibt alle entsprechenden Elemente zurück.
+			</p>
+		</div>
+		<div class="box">
+			<h4>getElementsByTagName</h4>
+			<table>
+				<tr>
+					<td>Javascript</td>
+					<td style="font-family: new courier">document.getElementsByTagName("p");</td>
+				</tr>
+				<tr>
+			</table>
+			<p style="font-family: arial">Elemente können Anhand von Tagnames gefunden werden.
+				Alle Elemente mit dem Tag werden zurückgegeben.
+			</p>
+		</div>
+		<div class="box">
+			<h4>Text und Attribute ändern</h4>
+			<p> document.getElementById("link").innerText = "codewars.com";<br>
+				document.getElementById("link").innerHTML = "&lt;strong&gt;codewars.com&lt;/strong&gt;";<br>
+				document.getElementById("link").href = "codewars.com";<br>
+				document.getElementById("link").textContent = "text";<br>
+				document.getElementById("link").style.color = "blue";<br>
+				document.getElementById("link").style.fontFamily = "arial";
+			</p>
+		</div>
+		<div class="box">
+			<h4>Elemente hinzufügen und entfernen</h4>
+			<p>
+				const newEl = document.createElement("p");<br>
+				const newText = document.createTextNode("text");<br>
+				const elToInsert = newEl.appendChild(newText);<br>
+				document.getElementById("whatever").appendChild(elToInsert);<br><br>
+				const container = document.getElementById("container");<br>
+				const element = document.getElementById("element");<br>
+				container.removeChild(element);
+			</p>
+		</div>
+		<div class="box">
+			<h4>Elemente hinzufügen und entfernen</h4>
+			<p>
+				document.querySelector("element").setAttribute("href", "http://google.com");<br>
+				document.querySelector("element").removeAttribute("href");
+			</p>
+		</div>
+		<div class="box">
+			<h4>Klassen hinzufügen und entfernen</h4>
+			<p>
+				button.classList.add("d-none");<br>
+				button.classList.remove("d-none");
+			</p>
+		</div>
+	</main>
+	<footer>
+		<section>
+			<b>Referenz</b> f&uuml;r vorgefertigte Objekte und Methoden:
+			<a href="https://bmu-verlag.de/js3" />https://bmu-verlag.de/js3</a>
+		</section>
+	</footer>
+</body>
+
+</html>
