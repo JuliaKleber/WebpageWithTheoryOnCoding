@@ -42,31 +42,45 @@
 	<main>
 		<div class="box">
 			<strong>for-Schleife</strong><br>
-			<p class="code">for i in (1..3)<br>
+			<p class="code">for i in (0...arr.length)<br>
 					&nbsp;&nbsp;&nbsp;&nbsp;Anweisungen<br>
 					}</p>
 		</div>
 
     <div class="box">
 			<strong>for-Schleife</strong><br>
-			<p class="code">for i in [1, 2, 3]<br>
+			<p class="code">for element in arr<br>
 					&nbsp;&nbsp;&nbsp;&nbsp;Anweisungen<br>
 					}</p>
 		</div>
 
 		<div class="box">
-			Mit <strong>break;</strong> wird der gesamte Schleifendurchlauf sofort abgebrochen.
-			<br><br>Mit <strong>continue</strong> wird nur der aktuelle Durchgang der Schleife abgebrochen
-			<br>und der nächste
-			Durchgang beginnt.
+			Mit <strong>break</strong> wird der gesamte Schleifendurchlauf sofort abgebrochen.
+			<br><br>Mit <strong>next</strong> wird nur der aktuelle Durchgang der Schleife abgebrochen
+			und der nächste Durchgang beginnt.
 		</div>
 
-		<div class="box">
-			<strong>for-Schleife für Arrays</strong>
-			<p class="code">arrayName.forEach((element) => {<br>
-				&nbsp;&nbsp;&nbsp;&nbsp;block;<br>
-				});<br></p>
-		</div>
+    <div class="box">
+      <strong>for-Schleife für Arrays</strong>
+      <p class="code">arr.each do |element|<br>
+        &nbsp;&nbsp;Anweisungen<br>
+        end<br></p>
+    </div>
+
+    <div class="box">
+      <strong>for-Schleife für Arrays</strong>
+      <p class="code">arr.each_with_index do |element, index|<br>
+        &nbsp;&nbsp;Anweisungen<br>
+        end<br></p>
+    </div>
+
+    <div class="box">
+      <strong>arr.count</strong>
+      <p class="code">count = arr.count do |element|<br>
+        &nbsp;&nbsp;condition<br>
+        end<br></p>
+        <p>gibt Zahl aus</p>
+    </div>
 	</main>
 </body>
 
