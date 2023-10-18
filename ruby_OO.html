@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title> JS - Klassen und Objekte </title>
+    <link rel="stylesheet" type="text/css" href="style_ruby.css">
+</head>
+
+<body>
+    <header>
+        <img src="ruby.png">
+        <nav>
+            <div>
+                <a href="html_Allgemeines.html">HTML</a>
+                <a href="css_Allgemeines.html">CSS</a>
+                <a href="JS_Allgemeines.html">JavaScript</a>
+                <a href="python_Allgemeines.html">Python</a>
+                <a href="ruby_Allgemeines.html"><strong>Ruby</strong></a>
+                <a href="terminal.html">Terminal</a>
+                <a href="git.html">Git</a>
+                <a href="Abkuerzungen.html">Abk&uuml;rzungen</a>
+            </div><br>
+            <div>
+                <a href="ruby_Allgemeines.html">Allgemeines</a>
+                <a href="ruby_Variablen.html">Datentypen</a>
+                <a href="ruby_if_else.html">Strukturen</a>
+                <a href="ruby_OO.html"><strong>Klassen und Objekte</strong></a><br>
+                <a href="ruby_Fehlerbehandlung.html">Fehlerbehandlung</a>
+            </div>
+        </nav>
+        <img src="ruby.png">
+    </header>
+    <main>
+        <div class="box">
+            <h4>Erstellung einer <strong>Klasse</strong></h4>
+            <p class = "code">
+            <strong>class</strong> KlassenName<br>
+            &nbsp;&nbsp;attr_reader :instanz_variable_zwei<br>
+            <br>
+            &nbsp;&nbsp;<strong>def initialize</strong>(parameter)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;@instanz_variable_eins = parameter_eins<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;@instanz_variable_zwei = parameter_two<br>
+            &nbsp;&nbsp;<b>end</b><br>
+            <br>
+            &nbsp;&nbsp;<b>def</b> getter_methode<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;@instanz_variable_eins<br>
+            &nbsp;&nbsp;<b>end</b><br>
+            <br>
+            &nbsp;&nbsp;<b>def</b> setter_methode<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;@instanz_variable_eins += @instanz_variable_eins<br>
+            &nbsp;&nbsp;<b>end</b><br>
+            <br>
+            &nbsp;&nbsp;<b>def</b> setter_methode_two(parameter_name)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;@instanz_variable_eins = parameter_name<br>
+            &nbsp;&nbsp;<b>end</b><br>
+            <b>end</b></p>
+        </div>
+        <div class="box">
+            <strong>Vererbung</strong><br><br>
+            class KlasseZwei <strong>extends</strong> Klassenname { <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;constructor(attribute) { <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>super</strong>(attribute); <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.attribut3 = attribut3; <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;} <br>
+            }
+        </div>
+        <div class="box">
+            <h4><strong>Deklaration</strong> einer neuen Instanz</h4>
+            <p class="code">instanz_name = KlassenName.<strong>new</strong>(attribute)</p>
+        </div>
+
+        <div class="box">
+          <p> <b>Reader</b> oder <b>Getter</b>-Methoden sind Methoden<br> mit denen Daten der Instanz gelesen werden können.</p><p>
+            <b>Writer</b> oder <b>Setter</b>-Methoden sind Methoden<br> mit denen Daten der Instanz verändert werden können.
+          </p>
+      </div>
+
+        <div class="box">
+            <p>
+                Wenn auf eine Methode aus dem Hauptprogramm<br>
+                aus nicht zugegriffen werden soll (<strong>Kapselung</strong>),<br>
+                stellt man ihr ein <span class = "code"><b>private</b></span> voran.</p>
+        </div>
+
+        <div class="box">
+          <p> Instanzen werden in lower_snake_case benannt.<br>
+            Klassen werden in UpperCamelCase benannt.<br>
+            Dateien, die Klassen enthalten, werden in UpperCamelCase benannt.
+          </p>
+      </div>
+
+      <div class="box">
+        <p> Mit <strong>attr_reader</strong> wird festgelegt,<br>
+          dass man aus dem Hauptprogramm aus<br> auf die jeweiligen Instanzvariablen zugreifen kann.
+        </p>
+    </div>
+    </main>
+</body>
+
+</html>

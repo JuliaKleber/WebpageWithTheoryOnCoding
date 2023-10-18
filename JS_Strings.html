@@ -110,6 +110,59 @@
 			decodeURI('text');&nbsp;&nbsp;&nbsp;&nbsp;
 			wandelt Zeichenfolgen in Umlaute um
 		</div>
+
+    <div class="box">
+			<h4>Reguläre Ausdrücke</h4>
+			<p>\d = [0-9]<br>
+        \D = [^0-9]<br>
+        \w = [A-Za-z0-9_]<br>
+      \W = [^A-Za-z0-9_]<br>
+      \s = whitespace<br>
+    \S = no whitespace</p>
+		</div>
+
+    <div class="box">
+			<h4>Reguläre Ausdrücke</h4>
+			<p>{m, n}: m bis n Wiederholungen<br>
+        *: 0 der mehr Wiederholungen<br>
+        +: 1 oder mehr Wiederholungen<br>
+        ?: 0 oder 1 Vorkommen</p>
+		</div>
+
+    <div class="box">
+			<h4>Reguläre Ausdrücke</h4>
+			<p>. any character<br>
+      \. Punkt<br>
+      ^...$ Start und Ende einer Zeile</p>
+		</div>
+
+    <div class="box">
+			<h4>Methoden für Reguläre Ausdrücke</h4>
+			<table>
+        <tbody>
+          <tr>
+            <td>regex.test("text")</td>
+            <td>true, wenn regex in Text enthalten ist</td>
+          </tr>
+          <tr>
+            <td>text.match(regex)</td>
+            <td>gibt Array mit Übereinstimmungen zurück oder null</td>
+          </tr>
+          <tr>
+            <td>text.replace(regex, "new")</td>
+            <td>gibt String zurück in dem Übereinstimmungen durch anderen Text ersetzt wurden</td>
+          </tr>
+          <tr>
+            <td>text.split(regex)</td>
+            <td>Text wird an Übereinstimmungen geteilt</td>
+          </tr>
+          <tr>
+            <td>regex.exec(text)</td>
+            <td>gibt erste Übereinstimmung im text zurück (oder null) und andere Informationen</td>
+          </tr>
+        </tbody>
+      </table>
+		</div>
 	</main>
 	<footer>
 		<section>
