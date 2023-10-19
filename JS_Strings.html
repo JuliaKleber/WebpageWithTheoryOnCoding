@@ -93,8 +93,9 @@
 		</div>
 
 		<div class="box">
-			<b>Vergleichsoperatoren</b> können auch für Strings genutzt werden. Das Ergebnis richtet sich dann nach der
-			<b>alphabetischen Ordnung</b>.
+			<p><b>Vergleichsoperatoren</b> können auch für Strings genutzt werden.<br>
+      Das Ergebnis richtet sich dann nach der
+			<b>alphabetischen Ordnung</b>.</p>
 		</div>
 
 		<div class="box">
@@ -104,36 +105,46 @@
 
 		<div class="box">
 			<h4>Umlaute</h4>
-			im head: &lt;meta charset="UTF-8"&gt;<br><br>
+			<p>im head: &lt;meta charset="UTF-8"&gt;<br><br>
 			encodeURI('text');&nbsp;&nbsp;&nbsp;&nbsp
 			wandelt Umlaute in Zeichenfolgen um<br>
 			decodeURI('text');&nbsp;&nbsp;&nbsp;&nbsp;
-			wandelt Zeichenfolgen in Umlaute um
+			wandelt Zeichenfolgen in Umlaute um</p>
 		</div>
 
     <div class="box">
 			<h4>Reguläre Ausdrücke</h4>
-			<p>\d = [0-9]<br>
-        \D = [^0-9]<br>
-        \w = [A-Za-z0-9_]<br>
-      \W = [^A-Za-z0-9_]<br>
-      \s = whitespace<br>
-    \S = no whitespace</p>
+			<table><tr><td>\d</td><td>[0-9]</td></tr>
+        <tr><td>\D</td><td>[^0-9]</td></tr>
+        <tr><td>\w</td><td>[A-Za-z0-9_]</td></tr>
+        <tr><td>\W</td><td>[^A-Za-z0-9_]</td></tr>
+      <tr><td>\s</td><td>whitespace</td></tr>
+      <tr><td>\S</td><td>kein whitespace</td></tr></table>
 		</div>
 
     <div class="box">
 			<h4>Reguläre Ausdrücke</h4>
-			<p>{m, n}: m bis n Wiederholungen<br>
-        *: 0 der mehr Wiederholungen<br>
-        +: 1 oder mehr Wiederholungen<br>
-        ?: 0 oder 1 Vorkommen</p>
+			<table><tr><td>{m, n}</td><td>m bis n Wiederholungen</td></tr>
+        <tr><td>*</td><td>0 der mehr Wiederholungen</td></tr>
+        <tr><td>+</td><td>1 oder mehr Wiederholungen</td></tr>
+        <tr><td>?</td><td>0 oder 1 Vorkommen</td></tr></table>
 		</div>
 
     <div class="box">
 			<h4>Reguläre Ausdrücke</h4>
-			<p>. any character<br>
-      \. Punkt<br>
-      ^...$ Start und Ende einer Zeile</p>
+			<table><tr><td>.</td><td>beliebiges Zeichen</td></tr>
+        <tr><td>\.</td><td>Punkt</td></tr>
+      <tr><td>^...$</td><td>Start und Ende einer Zeile</td></tr>
+      <tr><td>\b</td><td>Start und Ende eines Wortes</td></tr>
+      <tr><td>()</td><td>Gruppierungen durch Klammern</td></tr>
+      <tr><td>|</td><td>oder</td></tr></table>
+		</div>
+
+    <div class="box">
+			<h4>Tutorials für Reguläre Ausdrücke</h4>
+      <a href="https://regexone.com/">regexone.com</a><br>
+      <a href="https://regexcrossword.com/">regexcrossword.com</a><br>
+      <a href="https://alf.nu/RegexGolf?world=regex&level=r00">alf.nu/RegexGolf</a>
 		</div>
 
     <div class="box">

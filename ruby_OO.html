@@ -36,11 +36,14 @@
             <h4>Erstellung einer <strong>Klasse</strong></h4>
             <p class = "code">
             <strong>class</strong> KlassenName<br>
-            &nbsp;&nbsp;attr_reader :instanz_variable_zwei<br>
+            &nbsp;&nbsp;<strong>attr_reader</strong> :instanz_variable_eins<br>
+            &nbsp;&nbsp;<strong>attr_writer</strong> :instanz_variable_zwei<br>
+            &nbsp;&nbsp;<strong>attr_accessor</strong> :instanz_variable_drei<br>
             <br>
             &nbsp;&nbsp;<strong>def initialize</strong>(parameter)<br>
             &nbsp;&nbsp;&nbsp;&nbsp;@instanz_variable_eins = parameter_eins<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;@instanz_variable_zwei = parameter_two<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;@instanz_variable_zwei = parameter_zwei<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;@instanz_variable_drei = parameter_drei<br>
             &nbsp;&nbsp;<b>end</b><br>
             <br>
             &nbsp;&nbsp;<b>def</b> getter_methode<br>
@@ -51,20 +54,28 @@
             &nbsp;&nbsp;&nbsp;&nbsp;@instanz_variable_eins += @instanz_variable_eins<br>
             &nbsp;&nbsp;<b>end</b><br>
             <br>
-            &nbsp;&nbsp;<b>def</b> setter_methode_two(parameter_name)<br>
+            &nbsp;&nbsp;<b>def</b> setter_methode_zwei(parameter_name)<br>
             &nbsp;&nbsp;&nbsp;&nbsp;@instanz_variable_eins = parameter_name<br>
             &nbsp;&nbsp;<b>end</b><br>
             <b>end</b></p>
         </div>
         <div class="box">
-            <strong>Vererbung</strong><br><br>
-            class KlasseZwei <strong>extends</strong> Klassenname { <br>
-            &nbsp;&nbsp;&nbsp;&nbsp;constructor(attribute) { <br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>super</strong>(attribute); <br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.attribut3 = attribut3; <br>
-            &nbsp;&nbsp;&nbsp;&nbsp;} <br>
-            }
+            <h4>Vererbung</h4>
+            <p class="code"><strong>require_relative</strong> "KlassenName"</p>
+            <p class="code">class KlasseZwei <strong>&lt;</strong> Klassenname<br>
+            end</p>
+            <p><strong>super</strong> wird in einer Methode genutzt um<br> Methoden aus der Elternklasse zu nutzen</p>
         </div>
+
+        <div class="box">
+          <p><strong>self</strong> wird genutzt, wenn auf die Instanz der Klasse referenziert wird.</p>
+      </div>
+
+        <div class="box">
+          <h4>Klasse in Programm nutzen</h4>
+          <p class="code"><strong>require_relative</strong> "KlassenName"</p>
+      </div>
+
         <div class="box">
             <h4><strong>Deklaration</strong> einer neuen Instanz</h4>
             <p class="code">instanz_name = KlassenName.<strong>new</strong>(attribute)</p>
@@ -90,11 +101,26 @@
           </p>
       </div>
 
-      <div class="box">
-        <p> Mit <strong>attr_reader</strong> wird festgelegt,<br>
-          dass man aus dem Hauptprogramm aus<br> auf die jeweiligen Instanzvariablen zugreifen kann.
+      <div class="box" style="width: 250px">
+        <p> Mit <strong>attr_reader</strong> wird festgelegt,
+          welche Variablen man aus dem Hauptprogramm aus lesen kann
+          ohne dafür eine Methode schreiben zu müssen.
         </p>
     </div>
+
+    <div class="box" style="width: 250px">
+      <p> Mit <strong>attr_writer</strong> wird festgelegt,
+        welche Variablen man aus dem Hauptprogramm aus verändern kann
+        ohne dafür eine Methode schreiben zu müssen.
+      </p>
+  </div>
+
+    <div class="box" style="width: 250px">
+      <p> Mit <strong>attr_accessor</strong> wird festgelegt,
+        welche Variablen man aus dem Hauptprogramm aus lesen und verändern kann
+        ohne dafür eine Methode schreiben zu müssen.
+      </p>
+  </div>
     </main>
 </body>
 
