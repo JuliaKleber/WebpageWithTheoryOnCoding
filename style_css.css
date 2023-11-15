@@ -8,25 +8,25 @@ header{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin: 50px 0px 50px 0px;
+    margin: 48px 0px 48px 0px;
 }
 
 nav{
     background-color: white;
     padding: 20px 20px;
     width: 580px;
-    border-radius: 10px;
+    border-radius: 8px;
     border: 1px solid #bbdeff;
     box-shadow: 0 0 16px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
-    align-items: center;  
+    align-items: center;
 }
 
 a{
     color: black;
     text-decoration: none;
-    margin: 3px;
+    margin: 4px;
     transition: 0.3s;
 }
 
@@ -39,7 +39,7 @@ img{
     width: auto;
     margin: 0px 20px;
     padding: 5px;
-    border-radius: 5px;
+    border-radius: 8px;
     background-color: white;
     box-shadow: 0 0 16px rgba(0,0,0,0.1);
 }
@@ -56,27 +56,27 @@ strong{
 }
 
 li{
-    margin-bottom: 3px;
+    margin-bottom: 4px;
 }
-     
+
 ul{
     list-style: none;
-    text-indent: -15px;
+    text-indent: -16px;
 }
 
 td{
-    padding-right: 30px;
-}  
+    padding-right: 28px;
+}
 
 .code{
     font-family: Courier New;
 }
 
-.box{
+.box, .card{
     background-color: white;
-    padding: 25px 50px;
-    margin: 25px;
-    border-radius: 10px;
+    padding: 24px 48px;
+    margin: 24px;
+    border-radius: 8px;
     border: 1px solid #bbdeff;
     box-shadow: 0 0 16px rgba(0,0,0,0.1);
 }

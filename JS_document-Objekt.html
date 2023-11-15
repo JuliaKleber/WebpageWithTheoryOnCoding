@@ -5,11 +5,6 @@
 	<meta charset="UTF-8">
 	<title> JS - document-Objekt </title>
 	<link rel="stylesheet" type="text/css" href="style_js.css">
-	<style>
-		p {
-			font-family: courier new;
-		}
-	</style>
 </head>
 
 <body>
@@ -22,6 +17,7 @@
 				<a href="JS_Allgemeines.html"><strong>JavaScript</strong></a>
 				<a href="python_Allgemeines.html">Python</a>
 				<a href="ruby_Allgemeines.html">Ruby</a>
+        <a href="SQL.html">SQL</a>
 				<a href="terminal.html">Terminal</a>
 				<a href="git.html">Git</a>
 				<a href="Abkuerzungen.html">Abk&uuml;rzungen</a>
@@ -49,88 +45,61 @@
 		<img src="JS.png">
 	</header>
 	<main>
-		<div class="box">
+		<div class="card">
 			<h3>DOM-Baum</h3>
-			<p style="font-family: arial"> Der DOM-Baum besteht aus Knoten, Kindern und Geschwistern.<br>
+			<p> Der DOM-Baum besteht aus Knoten, Kindern und Geschwistern.<br>
 				Das Ursprungselement ist das document-Element.
 			</p>
-			<p>
+			<p class="code">
 				document.body.firstElementChild.nextElementSibling<br>
 				document.body.lastElementChild.previousElementSibling<br>
 			</p>
-			<p style="font-family: arial"> Damit kann jedes Element der Seite angesteuert werden.</p>
+			<p> Damit kann jedes Element der Seite angesteuert werden.</p>
 		</div>
-		<div class="box">
-			<h4>class</h4>
-			<table>
-				<tr>
-					<td>HTML</td>
-					<td style="font-family: new courier">&lt;h1 class="header1"&gt;&lt;h1&gt;</td>
-				</tr>
-				<tr>
-					<td>Javascript</td>
-					<td style="font-family: new courier">document.getElementByClassName("header1").innerText =
-						"Überschrift1";</td>
-				</tr>
-				<tr>
-					<td>Javascript</td>
-					<td style="font-family: new courier">document.getElementsByClassName("header1").innerText =
-						"Überschrift1";</td>
-				</tr>
-			</table>
-			<p style="font-family: arial">getElementByClassName gibt das erste Element oder null zurück, falls es keins
-				mit dem CSS-Selector gibt.<br>
-				getElementsByClass gibt alle entsprechenden Elemente zurück.
+
+		<div class="card">
+			<h4>getElement(s)ByClassName</h4>
+					<p class="code">document.getElementByClassName("className")</p>
+					<p class="code">document.getElementsByClassName("className")</p>
+			<p><strong>getElementByClassName</strong> gibt das erste Element mit dem Klassennamen oder null zurück, falls es keins
+				mit dem CSS-Selector gibt.</p>
+      <p>
+				<strong>getElementsByClassName</strong> gibt alle entsprechenden Elemente zurück.
 			</p>
 		</div>
-		<div class="box">
-			<h4>id-Attribut</h4>
-			<table>
-				<tr>
-					<td>HTML</td>
-					<td style="font-family: new courier">&lt;h1 id="header1"&gt;&lt;h1&gt;</td>
-				</tr>
-				<tr>
-					<td>Javascript</td>
-					<td style="font-family: new courier">document.getElementById("header1").innerText = "Überschrift1";
-					</td>
-				</tr>
-			</table>
-			<p style="font-family: arial">Gibt das Element mit der id "header1" zurück.</p>
+
+		<div class="card">
+			<h4>getElementById</h4>
+			<p>document.getElementById("idName")</p>
+			<p>Gibt das Element mit dem ID-Namen zurück.</p>
 		</div>
-		<div class="box">
+
+    <div class="card">
+      <h4>getElementsByTagName</h4>
+      <p>document.getElementsByTagName("tagName");</p>
+      <p>Elemente können Anhand von Tagnames gefunden werden.
+        Alle Elemente mit dem Tag werden zurückgegeben.
+      </p>
+    </div>
+
+		<div class="card">
 			<h4>querySelector</h4>
-			<table>
-				<tr>
-					<td>Javascript</td>
-					<td style="font-family: new courier">document.querySelector(#idName);</td>
-				</tr>
-				<tr>
-					<td>Javascript</td>
-					<td style="font-family: new courier">document.querySelectorAll(.className);</td>
-				</tr>
-			</table>
-			<p style="font-family: arial">querySelector gibt das erste Element oder null zurück, falls es keins mit dem
-				CSS-Selector gibt.<br>
-				querySelectorAll gibt alle entsprechenden Elemente zurück.
+					<p class="code">document.querySelector("#idName");</p>
+					<p class="code">document.querySelector(".className");</p>
+          <p class="code">document.querySelectorAll("tagName");</p>
+          <p class="code">document.querySelectorAll("tag .className");</p>
+          <p class="code">document.querySelectorAll("tag > .className");</p>
+			<p><strong>querySelector</strong> gibt das erste Element oder null zurück, falls es keins mit dem
+				CSS-Selector gibt.</p>
+        <p><strong>querySelectorAll</strong> gibt alle entsprechenden Elemente zurück.
 			</p>
+      <p>tag .className: irgendein Nachkomme</p>
+      <p>tag .className: direktes Kind</p>
 		</div>
-		<div class="box">
-			<h4>getElementsByTagName</h4>
-			<table>
-				<tr>
-					<td>Javascript</td>
-					<td style="font-family: new courier">document.getElementsByTagName("p");</td>
-				</tr>
-				<tr>
-			</table>
-			<p style="font-family: arial">Elemente können Anhand von Tagnames gefunden werden.
-				Alle Elemente mit dem Tag werden zurückgegeben.
-			</p>
-		</div>
-		<div class="box">
+
+		<div class="card">
 			<h4>Text und Attribute ändern</h4>
-			<p> document.getElementById("link").innerText = "codewars.com";<br>
+			<p class="code"> document.getElementById("link").innerText = "codewars.com";<br>
 				document.getElementById("link").innerHTML = "&lt;strong&gt;codewars.com&lt;/strong&gt;";<br>
 				document.getElementById("link").href = "codewars.com";<br>
 				document.getElementById("link").textContent = "text";<br>
@@ -138,39 +107,51 @@
 				document.getElementById("link").style.fontFamily = "arial";
 			</p>
 		</div>
-		<div class="box">
+
+		<div class="card">
 			<h4>Elemente hinzufügen und entfernen</h4>
-			<p>
+			<p class="code">
 				const newEl = document.createElement("p");<br>
 				const newText = document.createTextNode("text");<br>
 				const elToInsert = newEl.appendChild(newText);<br>
 				document.getElementById("whatever").appendChild(elToInsert);<br><br>
 				const container = document.getElementById("container");<br>
 				const element = document.getElementById("element");<br>
-				container.removeChild(element);
+				container.removeChild(element);<br><br>
+        element.insertAdjacentHTML("location", "html");<br>
+        location: "beforebegin", "afterbegin", "beforeend", "afterend"
 			</p>
 		</div>
-		<div class="box">
-			<h4>Elemente hinzufügen und entfernen</h4>
-			<p>
-				document.querySelector("element").setAttribute("href", "http://google.com");<br>
-				document.querySelector("element").removeAttribute("href");
+
+		<div class="card">
+      <h4>Attribute hinzufügen und entfernen</h4>
+			<p class="code">
+				document.querySelector("element").<strong>setAttribute</strong>("href", "http://google.com");<br>
+				document.querySelector("element").<strong>removeAttribute</strong>("href");
 			</p>
 		</div>
-		<div class="box">
+
+    <div class="card">
+      <h4>data-attributes</h4>
+      <p class="code">&lt;html-tag data-dataName="variable"&gt;&lt;/html-tag&gt;</p>
+      <p class="code">element.dataset.dataName</p>
+      <p class="code">element.getAttribute("data-dataName")</p>
+    </div>
+
+		<div class="card">
 			<h4>Klassen hinzufügen und entfernen</h4>
-			<p>
-				button.classList.add("d-none");<br>
-				button.classList.remove("d-none");
+			<p class="code">
+				button.classList.add("class-name");<br>
+				button.classList.remove("class-name");<br>
+        button.classList.toggle("class-name");
 			</p>
 		</div>
 	</main>
 	<footer>
-		<section>
-			<b>Referenz</b> f&uuml;r vorgefertigte Objekte und Methoden:
-			<a href="https://bmu-verlag.de/js3" />https://bmu-verlag.de/js3</a>
-		</section>
-	</footer>
+    <span><b>Referenz</b></span>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">https://developer.mozilla.org/en-US/docs/Web/JavaScript</a>
+    <a href="https://bmu-verlag.de/js3">https://bmu-verlag.de/js3</a>
+</footer>
 </body>
 
 </html>

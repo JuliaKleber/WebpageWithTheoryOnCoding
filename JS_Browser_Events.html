@@ -17,6 +17,7 @@
 				<a href="JS_Allgemeines.html"><strong>JavaScript</strong></a>
 				<a href="python_Allgemeines.html">Python</a>
 				<a href="ruby_Allgemeines.html">Ruby</a>
+        <a href="SQL.html">SQL</a>
 				<a href="terminal.html">Terminal</a>
 				<a href="git.html">Git</a>
 				<a href="Abkuerzungen.html">Abk&uuml;rzungen</a>
@@ -44,31 +45,23 @@
 		<img src="JS.png">
 	</header>
 	<main>
-		<div class="box">
-			<h4>Events</h4>
+		<div class="card">
+			<h4>Mouse-Events</h4>
 			<table>
 				<tr>
 					<td class="code">click</td>
 					<td>Mausklick</td>
 				</tr>
 				<tr>
-					<td class="code">input</td>
-					<td>Eingabe in input oder textarea</td>
-				</tr>
-				<tr>
-					<td class="code">change</td>
-					<td>Eingabe in input, textarea oder select</td>
-				</tr>
-				<tr>
-					<td class="code">contextmenu</td>
+          <td class="code">contextmenu</td>
 					<td>rechter Mausklick</td>
 				</tr>
 				<tr>
-					<td class="code">mouseover</td>
+          <td class="code">mouseover</td>
 					<td>Cursor wird auf Element bewegt</td>
 				</tr>
 				<tr>
-					<td class="code">mouseout</td>
+          <td class="code">mouseout</td>
 					<td>Cursor wird von Element entfernt</td>
 				</tr>
 				<tr>
@@ -76,24 +69,46 @@
 					<td>Maustaste wird gedrückt</td>
 				</tr>
 				<tr>
-					<td class="code">mouseup</td>
+          <td class="code">mouseup</td>
 					<td>Maustaste wird losgelassen</td>
 				</tr>
 				<tr>
-					<td class="code">mousemove</td>
+          <td class="code">mousemove</td>
 					<td>Maus wird bewegt</td>
 				</tr>
 				<tr>
-					<td class="code">dblclick</td>
+          <td class="code">dblclick</td>
 					<td>Doppelklick</td>
 				</tr>
-				<tr>
-					<td class="code">submit</td>
+        <tr>
+          <td class="code">wheel</td>
+					<td>Mausrad wird gedreht</td>
+				</tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <h4>Events</h4>
+      <table>
+        <tr>
+          <td class="code">input</td>
+          <td>Eingabe in input oder textarea</td>
+        </tr>
+        <tr>
+          <td class="code">change</td>
+          <td>Eingabe in input, textarea oder select</td>
+        </tr>
+        <tr>
+          <td class="code">submit</td>
 					<td>Formular wird abgeschickt</td>
 				</tr>
 				<tr>
-					<td class="code">focus</td>
+          <td class="code">focus</td>
 					<td>Anwender setzt Fokus auf Element</td>
+				</tr>
+        <tr>
+					<td class="code">blur</td>
+					<td>Anwender verlässt das Feld</td>
 				</tr>
 				<tr>
 					<td class="code">keypress</td>
@@ -108,16 +123,56 @@
 					<td>Taste wird losgelassen</td>
 				</tr>
 				<tr>
-					<td class="code">DOMContentLoaded</td>
-					<td>wird ausgelöst, wenn Inhalt von Seite geladen ist</td>
-				</tr>
-				<tr>
 					<td class="code">transitioned</td>
 					<td>Ende von CSS-Animation</td>
 				</tr>
 			</table>
 		</div>
-		<div class="box">
+
+    <div class="card">
+      <h4>Window-Events</h4>
+      <table>
+				<tr>
+					<td class="code">DOMContentLoaded</td>
+					<td>wird ausgelöst, wenn Inhalt von Seite geladen ist</td>
+				</tr>
+        <tr>
+					<td class="code">resize</td>
+					<td>wird ausgelöst, wenn die Fenstergröße geändert wurde</td>
+				</tr>
+        <tr>
+					<td class="code">copy</td>
+					<td>When the user initiates a copy action through the browser’s user interface</td>
+				</tr>
+        <tr>
+					<td class="code">paste</td>
+					<td> When the user initiates a paste action through the browser’s user interface</td>
+				</tr>
+        <tr>
+					<td class="code">pageshow</td>
+					<td>When the browser makes the document visible due to navigation tasks</td>
+				</tr>
+        <tr>
+					<td class="code">pagehide</td>
+					<td>When a page is hidden from view by navigation, like a back or forward button</td>
+				</tr>
+			</table>
+		</div>
+
+    <div class="card">
+      <h4>Klick rechte Maustaste</h4>
+      <p class="code">element.addEventListener("mouseup", (event) => {</br>
+        &nbsp;&nbsp;if (event.button === 2) {</br>
+        &nbsp;&nbsp;}</br>
+      });</p>
+    </div>
+
+    <div class="card">
+      <h4>preventDefault()</h4>
+      <p>Blockiert das Standardverhalten bei einem Event.</p>
+    </div>
+
+		<div class="card">
 			<h4>Event-Handler mit on</h4>
 			<p>Einen Event-Handler kann man erzeugen,
 				indem man dem Namen des Events den Begriff
@@ -135,13 +190,15 @@
 				</tr>
 			</table>
 		</div>
-		<div class="box">
+
+		<div class="card">
 			<h4> Event-Listener</h4>
 			<p>Es können mehrere Event-Listener zu einem
 				Event einem Element zugeordnet werden.
 				In Klammern kommt erst das Event in
 				Anführungszeichen und dann der Name der Funktion,
 				die ausgeführt werden soll, ohne Klammern.
+        Die Funktion wird auch Callback genannt.
 				Alternativ kann eine anonyme Funktion eingeführt werden
 				mit dem Funktionsblock in geschweiften Klammern.
 				Diese kann später aber nicht entfernt werden.
@@ -166,10 +223,12 @@
 				</tr>
 			</table>
 		</div>
-		<div class="box">
-			<h4> Zugriff auf Element, das Event auslöst</h4>
-			<p class="code">event.target
-			</p>
+
+		<div class="card">
+			<h4>event.target / event.currentTarget</h4>
+      <p><strong>event.currentTarget</strong> steht für das Element des eventListeners.</p>
+      <p><strong>event.target</strong> steht für das Element des Ereignisses.</p>
+      <p>Die beiden können identisch sein oder event.target ist ein Abkömmling von event.currentTarget.</p>
 			<p>
 				Beispiele:
 			</p>
@@ -184,7 +243,7 @@
 				</tr>
 			</table>
 		</div>
-		<div class="box">
+		<div class="card">
 			<h4> Bubbling</h4>
 			<p> Wenn ein Element durch umschließende Elemente
 				im Bereich mehrerer Events liegt, werden durch die Aktion alle Events ausglöst.
@@ -193,7 +252,7 @@
 				Dann wird nur das "innerste" Event getriggert.
 			</p>
 		</div>
-		<div class="box">
+		<div class="card">
 			<h4>Tastaturereignisse</h4>
 			<p>Shift- und Pfeiltasten lösen keydown und keyup-Events aus,
 				aber kein keypress-Event.
@@ -216,11 +275,10 @@
 		</div>
 	</main>
 	<footer>
-		<section>
-			<b>Referenz</b> f&uuml;r vorgefertigte Objekte und Methoden:
-			<a href="https://bmu-verlag.de/js3" />https://bmu-verlag.de/js3</a>
-		</section>
-	</footer>
+    <span><b>Referenz</b></span>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">https://developer.mozilla.org/en-US/docs/Web/JavaScript</a>
+    <a href="https://bmu-verlag.de/js3">https://bmu-verlag.de/js3</a>
+</footer>
 </body>
 
 </html>

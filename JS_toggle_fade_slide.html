@@ -30,6 +30,7 @@
 			<a href="JS_Allgemeines.html"><strong>JavaScript</strong></a>
 			<a href="python_Allgemeines.html">Python</a>
 			<a href="ruby_Allgemeines.html">Ruby</a>
+      <a href="SQL.html">SQL</a>
 			<a href="terminal.html">Terminal</a>
 			<a href="git.html">Git</a>
 			<a href="Abkuerzungen.html">Abk&uuml;rzungen</a>
@@ -83,22 +84,22 @@
 		<div class="box">
 			<h4>JavaScript</h4>
 			<p> const toggleButton = document.getElementById("toggleButton");<br>
-				const elementToToggle = document.getElementById("elementToToggle");<br>                     
+				const elementToToggle = document.getElementById("elementToToggle");<br>
 				toggleButton.addEventListener("click", function() {<br>
 				&nbsp;&nbsp;&nbsp;&nbsp;elementToToggle.classList.toggle("hidden");<br>
 				&nbsp;&nbsp;&nbsp;&nbsp;elementToToggle.classList.toggle("visible");<br>
-				});            
+				});
 			</p>
 		</div>
 		<div class="box">
 			<h4>Beispiel</h4>
 			<p> <div id="elementToToggle" class="hidden">This is a hidden element.</div><br>
-				<button id="toggleButton">See this in action!</button>                   
+				<button id="toggleButton">See this in action!</button>
 			</p>
 		</div>
 		<script>
 			const toggleButton = document.getElementById("toggleButton");
-			const elementToToggle = document.getElementById("elementToToggle");                     
+			const elementToToggle = document.getElementById("elementToToggle");
 			toggleButton.addEventListener("click", function() {
 				elementToToggle.classList.toggle("hidden");
 				elementToToggle.classList.toggle("visible");
@@ -106,10 +107,9 @@
 		</script>
 	</main>
 	<footer>
-	  <section>
-		<b>Referenz</b> f&uuml;r vorgefertigte Objekte und Methoden:
-		<a href="https://bmu-verlag.de/js3"/>https://bmu-verlag.de/js3</a>
-	  </section>
-	</footer>
+    <span><b>Referenz</b></span>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">https://developer.mozilla.org/en-US/docs/Web/JavaScript</a>
+    <a href="https://bmu-verlag.de/js3">https://bmu-verlag.de/js3</a>
+</footer>
   </body>
 </html>

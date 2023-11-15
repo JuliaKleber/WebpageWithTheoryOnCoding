@@ -23,6 +23,7 @@
                 <a href="JS_Allgemeines.html"><strong>JavaScript</strong></a>
                 <a href="python_Allgemeines.html">Python</a>
                 <a href="ruby_Allgemeines.html">Ruby</a>
+                <a href="SQL.html">SQL</a>
                 <a href="terminal.html">Terminal</a>
                 <a href="git.html">Git</a>
                 <a href="Abkuerzungen.html">Abk&uuml;rzungen</a>
@@ -54,8 +55,25 @@
     <main>
         <div class="box">
             <h4>Unterschiede zu React</h4>
-            <p class="code">&lt;Text&gt;statt&lt;p&gt;</p>
-            <p class="code">&lt;View&gt;statt&lt;div&gt;</p>
+            <p class="code">&lt;Text&gt; statt &lt;p&gt;</p>
+            <p class="code">&lt;View&gt; statt &lt;div&gt;</p>
+            <p class="code">&lt;Button&gt; statt &lt;button&gt;</p>
+            <p class="code">&lt;TouchableOpacity&gt; statt &lt;button&gt;</p>
+            <p class="code">elevation: 2, statt box-shadow
+            </br>=> funktioniert aber nur in Android</p>
+        </div>
+        <div class="box">
+          <h4>style</h4>
+          <p class="code">style={styles.styleName}</p>
+          <p class="code">const styles = Stylesheet.create ({</br>
+            &nbsp;&nbsp;styleName: {</br>
+            &nbsp;&nbsp;&nbsp;&nbsp;marginTop: 10,</br>
+            &nbsp;&nbsp;}</br>
+            });</p>
+        </div>
+        <div class="box">
+          <h4>import</h4>
+          <p class="code">import { Stylesheet, View, Text, Button, TouchableOpacity } from "react-native";</p>
         </div>
     </main>
 </body>

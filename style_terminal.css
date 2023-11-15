@@ -7,7 +7,7 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 50px 0px 50px 0px;
+    margin: 48px 0px 48px 0px;
 }
 
 nav{
@@ -15,10 +15,10 @@ nav{
     justify-content: center;
     align-items: center;
     height: 60px;
-    width: 550px;
+    width: 620px;
     text-align: center;
     background-color: #fef5ff;
-    border-radius: 10px;
+    border-radius: 8px;
     border: 1px solid #EAEAEA;
     box-shadow: 0 0 16px rgba(0,0,0,0.1);
 }
@@ -26,16 +26,16 @@ nav{
 a{
     text-decoration: none;
     color: black;
-    padding: 7px;
+    padding: 8px;
 }
 
 img{
     height: 60px;
     width: auto;
-    margin: 0px 0px 0px 50px;
+    margin: 0px 0px 0px 48px;
     padding: 1px 4px;
     background-color: #fef5ff;
-    border-radius: 10px;
+    border-radius: 8px;
     border: 1px solid #EAEAEA;
     box-shadow: 0 0 16px rgba(0,0,0,0.1);
 }
@@ -47,12 +47,12 @@ main{
     justify-content: center;
 }
 
-.box{
+.card{
     background-color: #fef5ff;
-    margin: 25px;
-    padding: 30px 50px;
+    margin: 24px;
+    padding: 28px 48px;
     max-width: 700px;
-    border-radius: 10px;
+    border-radius: 8px;
     border: 1px solid #EAEAEA;
     box-shadow: 0 0 16px rgba(0,0,0,0.1);
 }
