@@ -2,140 +2,138 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <title> css - Display </title>
-    <link rel="stylesheet" type="text/css" href="style_css.css">
+  <meta charset="UTF-8">
+  <title> css - Display </title>
+  <link rel="stylesheet" type="text/css" href="style_css.css">
 </head>
 
 <body>
-    <header>
-        <img src="css3.png">
-        <nav>
-            <div>
-                <a href="html_Allgemeines.html">HTML</a>
-                <a href="css_Allgemeines.html"><strong>CSS</strong></a>
-                <a href="JS_Allgemeines.html">JavaScript</a>
-                <a href="python_Allgemeines.html">python</a>
-                <a href="ruby_Allgemeines.html">ruby</a>
-                <a href="SQL.html">SQL</a>
-                <a href="terminal.html">Terminal</a>
-                <a href="git.html">Git</a>
-                <a href="Abkuerzungen.html">Abk&uuml;rzungen</a>
-                <br><br>
-            </div>
-            <div>
-              <a href="css_Allgemeines.html">Allgemeines</a>
-              <a href="css_css_in_html.html">CSS in HTML</a>
-              <a href="css_Hintergrund.html">Hintergrund</a>
-              <a href="css_Text.html">Text</a>
-              <a href="css_Bootstrap.html">Bootstrap</a>
-            </div>
-            <div>
-              <a href="css_Rahmen_&_Abstand.html">Rahmen und Abstand</a>
-              <a href="css_Position.html">Position</a>
-              <a href="css_Display.html"><strong>Display</strong></a>
-              <a href="css_ButtonDesign.html">Button Design</a>
-            </div>
-            <div>
-              <a href="css_Overflowing_Content.html">Overflowing Content</a>
-              <a href="css_Pseudoklassen.html">Pseudoklassen</a>
-              <a href="css_Media_Queries.html">Responsive Design</a>
-              <br><br>
-            </div>
-            <div>
-              <a href="css_Display.html">Allgemeines</a>
-              <a href="css_Flexbox.html">Flexbox</a>
-              <a href="css_Grid.html"><strong>Grid</strong></a>
-            </div>
-        </nav>
-        <img src="css3.png">
-    </header>
-    <main>
-        <div class="box">
-            <h3>Grid Container</h3>
-            <table>
-                <tr>
-                    <td>display: grid;</td>
-                    <td>Grid wird zur Anordnung der Elemente genutzt</td>
-                </tr>
-                <tr>
-                    <td>grid-template-columns:</td>
-                    <td>Festlegung der Größe der Spalten</td>
-                </tr>
-                <tr>
-                    <td>grid-template-rows:</td>
-                    <td>Festlegung der Größe der Reihen</td>
-                </tr>
-            </table>
-            <ul>
-                <li>grid-template-rows: 25% 25% 25% 25%;</li>
-                <li>grid-template-rows: repeat(4, 25%);</li>
-                <li>grid-template-columns: 96px 3em 40% 1fr;</li>
-                <li>grid-template-columns: 2fr 1fr 2fr;</li>
-            </ul>
-            <p>grid-template: grid-template-rows / grid-template-columns;<br>
-                grid-template: 50px 1fr / 1fr 2fr;
-            </p>
-        </div>
-        <div class="box">
-            <h3>Grid Elemente: Spalten</h3>
-            <table>
-                <tr>
-                    <td>grid-column-start:</td>
-                    <td>Linie, ab der das Element angezeigt werden soll</td>
-                </tr>
-                <tr>
-                    <td>grid-column-end:</td>
-                    <td>Linie, bis der das Element angezeigt werden soll</td>
-                </tr>
-                <tr>
-                    <td>grid-column: 2 / 4;</td>
-                    <td>Linien, zwischen denen das Element angezeigt werden soll</td>
-                </tr>
-            </table>
-            <ul>
-                <li>Wenn es n Spalten gibt, gibt es n+1 Linien, die sie begrenzen.</li>
-                <li>Die Linien werden von links nach rechts durchgezählt.</li>
-                <li>Wenn man von rechts nach links zählt, werden negative Zahlen startend bei -1 genutzt.</li>
-                <li>Man kann bei grid-column-start/end auch "span m" angeben um anzugeben über wie viele Spalten es sich
-                <li>erstrecken soll.</li>
-            </ul>
-        </div>
-        <div class="box">
-            <h3>Grid Elemente: Reihen</h3>
-            <table>
-                <tr>
-                    <td>grid-row-start:</td>
-                    <td>Linie, ab der das Element angezeigt werden soll</td>
-                </tr>
-                <tr>
-                    <td>grid-row-end:</td>
-                    <td>Linie, bis der das Element angezeigt werden soll</td>
-                </tr>
-                <tr>
-                    <td>grid-row: 2 / 4;</td>
-                    <td>Linien, zwischen denen das Element angezeigt werden soll</td>
-                </tr>
-            </table>
-            <ul>
-                <li>Wenn es n Reihen gibt, gibt es n+1 Linien, die sie begrenzen.</li>
-                <li>Die Linien werden von oben nach unten durchgezählt.</li>
-                <li>Wenn man von unten nach oben zählt, werden negative Zahlen startend bei -1 genutzt.</li>
-                <li>Man kann bei grid-row-start/end auch "span m" angeben um anzugeben über wie viele Reihen es sich
-                <li>erstrecken soll.</li>
-            </ul>
-        </div>
-        <div class="box">
-            <h3>Grid Elemente: Area</h3>
-            <p>grid-area: grid-row-start / grid-column-start / grid-row-end /
-                grid-column-end;</p>
-        </div>
-        <div class="box">
-            <h3>Grid Elemente: Reihenfolge</h3>
-            <p>order: Standardwert ist 0.<br>
-                Kann auch negative Werte annehmen.</p>
-        </div>
-    </main>
+  <header>
+    <img src="css3.png">
+    <nav>
+      <div>
+        <a href="html_Allgemeines.html">HTML</a>
+        <a href="css_Allgemeines.html"><strong>CSS</strong></a>
+        <a href="JS_Allgemeines.html">JavaScript</a>
+        <a href="python_Allgemeines.html">python</a>
+        <a href="ruby_Allgemeines.html">ruby</a>
+        <a href="SQL.html">SQL</a>
+        <a href="terminal.html">Terminal</a>
+        <a href="git.html">Git</a>
+        <a href="Abkuerzungen.html">Abk&uuml;rzungen</a>
+        <br><br>
+      </div>
+      <div class="second-level-links">
+        <a href="css_Allgemeines.html">Allgemeines</a>
+        <a href="css_css_in_html.html">CSS in HTML</a>
+        <a href="css_Hintergrund.html">Hintergrund</a>
+        <a href="css_Text.html">Text</a>
+        <a href="css_Bootstrap.html">Bootstrap</a>
+        <a href="css_Rahmen_&_Abstand.html">Rahmen und Abstand</a>
+        <a href="css_Position.html">Position</a>
+        <a href="css_Display.html"><strong>Display</strong></a>
+        <a href="css_ButtonDesign.html">Button Design</a>
+        <a href="css_Overflowing_Content.html">Overflowing Content</a>
+        <a href="css_Pseudoklassen.html">Pseudoklassen</a>
+        <a href="css_Media_Queries.html">Responsive Design</a>
+      </div>
+      <div>
+        <br>
+        <a href="css_Display.html">Allgemeines</a>
+        <a href="css_Flexbox.html">Flexbox</a>
+        <a href="css_Grid.html"><strong>Grid</strong></a>
+      </div>
+    </nav>
+    <img src="css3.png">
+  </header>
+  <main>
+    <div class="card">
+      <h3>Grid Container</h3>
+      <table>
+        <tr>
+          <td>display: grid;</td>
+          <td>Grid wird zur Anordnung der Elemente genutzt</td>
+        </tr>
+        <tr>
+          <td>grid-template-columns:</td>
+          <td>Festlegung der Größe der Spalten</td>
+        </tr>
+        <tr>
+          <td>grid-template-rows:</td>
+          <td>Festlegung der Größe der Reihen</td>
+        </tr>
+      </table>
+      <ul>
+        <li>grid-template-rows: 25% 25% 25% 25%;</li>
+        <li>grid-template-rows: repeat(4, 25%);</li>
+        <li>grid-template-columns: 96px 3em 40% 1fr;</li>
+        <li>grid-template-columns: 2fr 1fr 2fr;</li>
+      </ul>
+      <p>grid-template: grid-template-rows / grid-template-columns;<br>
+          grid-template: 50px 1fr / 1fr 2fr;
+      </p>
+    </div>
+    <div class="card">
+      <h3>Grid Elemente: Spalten</h3>
+      <table>
+        <tr>
+          <td>grid-column-start:</td>
+          <td>Linie, ab der das Element angezeigt werden soll</td>
+        </tr>
+        <tr>
+          <td>grid-column-end:</td>
+          <td>Linie, bis der das Element angezeigt werden soll</td>
+        </tr>
+        <tr>
+          <td>grid-column: 2 / 4;</td>
+          <td>Linien, zwischen denen das Element angezeigt werden soll</td>
+        </tr>
+      </table>
+      <ul>
+        <li>Wenn es n Spalten gibt, gibt es n+1 Linien, die sie begrenzen.</li>
+        <li>Die Linien werden von links nach rechts durchgezählt.</li>
+        <li>Wenn man von rechts nach links zählt, werden negative Zahlen startend bei -1 genutzt.</li>
+        <li>Man kann bei grid-column-start/end auch "span m" angeben um anzugeben über wie viele Spalten es sich
+        <li>erstrecken soll.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Grid Elemente: Reihen</h3>
+      <table>
+        <tr>
+          <td>grid-row-start:</td>
+          <td>Linie, ab der das Element angezeigt werden soll</td>
+        </tr>
+        <tr>
+          <td>grid-row-end:</td>
+          <td>Linie, bis der das Element angezeigt werden soll</td>
+        </tr>
+        <tr>
+          <td>grid-row: 2 / 4;</td>
+          <td>Linien, zwischen denen das Element angezeigt werden soll</td>
+        </tr>
+      </table>
+      <ul>
+        <li>Wenn es n Reihen gibt, gibt es n+1 Linien, die sie begrenzen.</li>
+        <li>Die Linien werden von oben nach unten durchgezählt.</li>
+        <li>Wenn man von unten nach oben zählt, werden negative Zahlen startend bei -1 genutzt.</li>
+        <li>Man kann bei grid-row-start/end auch "span m" angeben um anzugeben über wie viele Reihen es sich
+        <li>erstrecken soll.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Grid Elemente: Area</h3>
+      <p>grid-area: grid-row-start / grid-column-start / grid-row-end /
+        grid-column-end;
+      </p>
+    </div>
+    <div class="card">
+      <h3>Grid Elemente: Reihenfolge</h3>
+      <p>order: Standardwert ist 0.<br>
+        Kann auch negative Werte annehmen.
+      </p>
+    </div>
+  </main>
 </body>
 
 </html>

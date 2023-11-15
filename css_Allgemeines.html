@@ -23,7 +23,7 @@
 				<a href="Abkuerzungen.html">Abk&uuml;rzungen</a>
 				<br><br>
 			</div>
-			<div>
+			<div class="second-level-links">
 				<a href="css_Allgemeines.html"><strong>Allgemeines</strong></a>
 				<a href="css_css_in_html.html">CSS in HTML</a>
 				<a href="css_Hintergrund.html">Hintergrund</a>
@@ -45,50 +45,55 @@
 		<img src="css3.png">
 	</header>
 	<main>
-		<div class="box">
+		<div class="card">
 			<h3>CSS = Cascading Style Sheets</h3>
 			<p>Selectors & Declarations</p><br>
 		</div>
-		<div class="box">
+		<div class="card">
 			<h3>Kommentare</h3>
 			<p>/* */</p>
 		</div>
-		<div class="box">
+		<div class="card">
 			<h3>Selektoren</h3>
 			<p>Können Tags, ids oder Klassen sein</p>
 		</div>
-		<div class="box">
+		<div class="card">
 			<h3>Styling für HTML-Tags</h3>
 			<p class="code">
 				p, a {<br>
 				&nbsp;&nbsp;&nbsp;&nbsp;...<br>
-				}</p>
+				}
+      </p>
 			<p>Styling gilt für p und a.</p>
 		</div>
-		<div class="box">
+		<div class="card">
 			<h3>Styling für HTML-Tags</h3>
 			<p class="code">
 				p a {<br>
 				&nbsp;&nbsp;&nbsp;&nbsp;...<br>
-				}</p>
+				}
+      </p>
 			<p>Styling gilt für a, das innerhalb von p steht.</p>
 		</div>
-		<div class="box">
+		<div class="card">
 			<h3>Styling für HTML-Tags</h3>
 			<p class="code">
 				section {<br>
 				&nbsp;&nbsp;&nbsp;&nbsp;...<br>
-				}</p>
+				}
+      </p>
 			<p class="code">
 				p {<br>
 				&nbsp;&nbsp;&nbsp;&nbsp;...<br>
-				}</p>
+				}
+      </p>
 			<p>Styling von dem inneren Element, also von p, hat Vorrang.</p>
 		</div>
-		<div class="box">
+		<div class="card">
 			<h3>ids</h3>
 			<p class="code">
-				&lt;div id="idName"&gt;</p>
+				&lt;div id="idName"&gt;
+      </p>
 			<p class="code">
 				#idName {<br>
 				&nbsp;&nbsp;&nbsp;&nbsp;...<br>
@@ -96,10 +101,11 @@
 			<p>Nur ein Element mit der id</p>
 			<p>Nur eine id pro Element</p>
 		</div>
-		<div class="box">
+		<div class="card">
 			<h3>classes</h3>
 			<p class="code">
-				&lt;div class="className"&gt;</p>
+				&lt;div class="className"&gt;
+      </p>
 			<p class="code">
 				.className {<br>
 				&nbsp;&nbsp;&nbsp;&nbsp;...<br>
@@ -107,17 +113,19 @@
 			</p>
 			<p>Mehrere Elemente mit der Klasse</p>
 		</div>
-		<div class="box">
+		<div class="card">
 			<h3>Elemente mit mehreren Klassen</h3>
 			<p class="code">
-				&lt;div class="className1 className2"&gt;</p>
+				&lt;div class="className1 className2"&gt;
+      </p>
 		</div>
-		<div class="box">
+		<div class="card">
 			<h3>Tags und Klassen mischen</h3>
 			<p class="code">
 				p.className {<br>
 				&nbsp;&nbsp;&nbsp;&nbsp;...<br>
-				}</p>
+				}
+      </p>
 			<p>Gilt für alle ps mit der Klasse className.</p>
 		</div>
 	</main>
