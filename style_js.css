@@ -36,6 +36,18 @@ nav{
     box-shadow: 0 0 16px rgba(0,0,0,0.1);
 }
 
+.first-level-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.second-level-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 main{
     display: flex;
     flex-wrap: wrap;

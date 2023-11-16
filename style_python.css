@@ -23,6 +23,12 @@ nav{
     align-items: center;
 }
 
+.first-level-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 a{
     text-decoration: none;
     color: black;
