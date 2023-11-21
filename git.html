@@ -23,13 +23,13 @@
     <img src="git.png">
   </header>
   <main>
-    <div class="box">
+    <div class='card'>
       <p><strong>Git</strong> ist eine freie Software zur verteilten
         Versionsverwaltung von Dateien,
         die durch Linus Torvalds 2005 initiiert wurde.</p>
       <p><strong>GitHub</strong> hat über 80 Mio Nutzer und ist von Microsoft.</p>
     </div>
-    <div class="box">
+    <div class='card'>
       <h4>Begriffe</h4>
       <table>
         <tr>
@@ -42,8 +42,7 @@
         </tr>
         <tr>
           <td>Staging Area</td>
-          <td>
-          </td>
+          <td>hier sind die Commits</td>
         </tr>
         <tr>
           <td>commits</td>
@@ -51,12 +50,12 @@
         </tr>
         <tr>
           <td>Pull Request</td>
-          <td>Informiert andere Entwickler darüber,
+          <td>Informiert andere Entwickler darüber,<br>
             dass es einen Branch mit Änderungen gibt.</td>
         </tr>
       </table>
     </div>
-    <div class="box">
+    <div class='card'>
       <h4>Befehle</h4>
       <table>
         <tr>
@@ -101,7 +100,7 @@
           <td>Definiert die Email-Adresse, die mit den Commits genutzt werden soll.</td>
         </tr>
         <tr>
-          <td>git clone [url]</td>
+          <td>git clone [SSH]</td>
           <td>Kopie eines Repositories wird erstellt.</td>
         </tr>
         <tr>
@@ -128,9 +127,17 @@
           <td>git diff commitname</td>
           <td>zeigt die Änderungen</td>
         </tr>
+        <tr>
+          <td>git branch -a</td>
+          <td>zeigt alle Branches an</td>
+        </tr>
+        <tr>
+          <td>gh browse</td>
+          <td>öffnet github repo im Browser</td>
+        </tr>
       </table>
     </div>
-    <div class="box">
+    <div class='card'>
       <h4>1. Commit zu GitHub</h4>
       <table>
         <tr>
@@ -144,16 +151,19 @@
         </tr>
         <tr>
           <td>git commit -m "first commit"</td>
-          <td></td>
+          <td>speichert Änderungen lokal</td>
+        </tr>
+        <tr>
+          <td>gh repo create --public --source=.</td>
+          <td>erstellt github repo</td>
         </tr>
         <tr>
           <td>git branch -M main</td>
-          <td></td>
+          <td>nennt master in main um</td>
         </tr>
         <tr>
-          <td>git remote add origin https://github.com/GoldieCrystal/Mastermind.git
-          </td>
-          <td></td>
+          <td>git remote add origin [url]</td>
+          <td>wenn das repo auf der github page erstellt wurde</td>
         </tr>
         <tr>
           <td>git push -u origin main</td>
@@ -161,7 +171,7 @@
         </tr>
       </table>
     </div>
-    <div class="box">
+    <div class='card'>
       <h4>2. Commit zu GitHub</h4>
       <table>
         <tr>
@@ -175,6 +185,110 @@
         <tr>
           <td>git push origin master</td>
           <td>Die Änderungen werden auf github (origin) gespeichert</td>
+        </tr>
+      </table>
+    </div>
+    <div class='card'>
+      <h4>Pull request</h4>
+      <table>
+        <tr>
+          <td>git add .</td>
+          <td>Fügt alle Dateien im Verzeichnis hinzu</td>
+        </tr>
+        <tr>
+          <td>git commit -m "whatever"</td>
+          <td>Änderungen werden lokal gespeichert</td>
+        </tr>
+        <tr>
+          <td>git push origin branch-name</td>
+          <td>Die Änderungen werden auf github (origin) gespeichert</td>
+        </tr>
+        <tr>
+          <td>gh browse</td>
+          <td>öffnet github repo im Browser</td>
+        </tr>
+        <tr>
+          <td>pull request auf github</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>reviewer: merch & clean</td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+    <div class='card'>
+      <h4>Nach merge</h4>
+      <table>
+        <tr>
+          <td>git status = gst</td>
+          <td>uncommited changes ?</td>
+        </tr>
+        <tr>
+          <td>git add/commit/push</td>
+          <td>-> Änderungen hochladen</td>
+        </tr>
+        <tr>
+          <td>git checkout main</td>
+          <td>wechselt zu Main-Branch</td>
+        </tr>
+        <tr>
+          <td>git pull origin main</td>
+          <td>Lädt aktuellen Main-Branch runter</td>
+        </tr>
+        <tr>
+          <td>git sweep</td>
+          <td>nicht mehr benötigte Branches werden gelöscht</td>
+        </tr>
+        <tr>
+          <td>bundle install</td>
+          <td>neue Gems werden installiert</td>
+        </tr>
+        <tr>
+          <td>rails db:migrate</td>
+          <td>neue Migrationen werden hinzugefügt</td>
+        </tr>
+        <tr>
+          <td>rails db:seed</td>
+          <td>Die Daten der Datenbank werden neu generiert</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class='card'>
+      <h4>Konflikte lösen</h4>
+      <table>
+        <tr>
+          <td>gco main</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>git pull origin main</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>gco branch-name</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>git merge main</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>resolve the conflict</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>git add .</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>git commit -m "conflicts solved"</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>git push origin branch-name</td>
+          <td></td>
         </tr>
       </table>
     </div>
