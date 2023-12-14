@@ -20,4 +20,4 @@ To use this guide, simply open the HTML file corresponding to the topic you're i
 
 ## Author
 
-Julia Kleber
+Julia Kleber (https://github.com/GoldieCrystal)
