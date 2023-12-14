@@ -17,3 +17,17 @@ This repository contains a collection of HTML files that serve as a reference gu
 ## Usage
 
 To use this guide, simply open the HTML file corresponding to the topic you're interested in. The files are designed to be viewed in a web browser.
+
+## Built with
+
+* HTML
+* CSS
+
+## Screenshot
+
+https://github.com/GoldieCrystal/WebpageWithTheoryOnCoding/assets/142741980/9096adbc-be60-4725-9cf8-fb192bf8160b
+
+
+## Author
+
+Julia Kleber (https://github.com/GoldieCrystal)
