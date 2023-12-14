@@ -17,3 +17,7 @@ This repository contains a collection of HTML files that serve as a reference gu
 ## Usage
 
 To use this guide, simply open the HTML file corresponding to the topic you're interested in. The files are designed to be viewed in a web browser.
+
+## Author
+
+Julia Kleber
