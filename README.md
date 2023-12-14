@@ -25,9 +25,8 @@ To use this guide, simply open the HTML file corresponding to the topic you're i
 
 ## Screenshot
 
-https://github.com/GoldieCrystal/WebpageWithTheoryOnCoding/assets/142741980/9096adbc-be60-4725-9cf8-fb192bf8160b
-
+![image](https://github.com/GoldieCrystal/WebpageWithTheoryOnCoding/assets/142741980/9096adbc-be60-4725-9cf8-fb192bf8160b)
 
 ## Author
 
-Julia Kleber (https://github.com/GoldieCrystal)
+[GoldieCrystal](https://github.com/GoldieCrystal)
