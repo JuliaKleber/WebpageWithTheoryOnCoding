@@ -26,13 +26,12 @@
                 <a href="ruby_Variablen.html">Datentypen</a>
                 <a href="ruby_if_else.html">Strukturen</a>
                 <a href="ruby_OO.html"><strong>Klassen und Objekte</strong></a><br>
-                <a href="ruby_Fehlerbehandlung.html">Fehlerbehandlung</a>
             </div>
         </nav>
         <img src="ruby.png">
     </header>
     <main>
-        <div class="box">
+        <div class="card">
             <h4>Erstellung einer <strong>Klasse</strong></h4>
             <p class = "code">
             <strong>class</strong> KlassenName<br>
@@ -59,7 +58,7 @@
             &nbsp;&nbsp;<b>end</b><br>
             <b>end</b></p>
         </div>
-        <div class="box">
+        <div class="card">
             <h4>Vererbung</h4>
             <p class="code"><strong>require_relative</strong> "klassen_name"</p>
             <p class="code">class KlasseZwei <strong>&lt;</strong> Klassenname<br>
@@ -67,55 +66,55 @@
             <p><strong>super</strong> wird in einer Methode genutzt um<br> Methoden aus der Elternklasse zu nutzen</p>
         </div>
 
-        <div class="box">
+        <div class="card">
           <p><strong>self</strong> wird genutzt, wenn auf die Instanz der Klasse referenziert wird.</p>
       </div>
 
-        <div class="box">
+        <div class="card">
           <h4>Klasse in Programm nutzen</h4>
           <p class="code"><strong>require_relative</strong> "klassen_name"</p>
       </div>
 
-        <div class="box">
+        <div class="card">
             <h4><strong>Deklaration</strong> einer neuen Instanz</h4>
             <p class="code">instanz_name = KlassenName.<strong>new</strong>(attribute)</p>
         </div>
 
-        <div class="box">
+        <div class="card">
           <p> <b>Reader</b> oder <b>Getter</b>-Methoden sind Methoden<br> mit denen Daten der Instanz gelesen werden können.</p><p>
             <b>Writer</b> oder <b>Setter</b>-Methoden sind Methoden<br> mit denen Daten der Instanz verändert werden können.
           </p>
       </div>
 
-        <div class="box">
+        <div class="card">
             <p>
                 Wenn auf eine Methode aus dem Hauptprogramm<br>
                 aus nicht zugegriffen werden soll (<strong>Kapselung</strong>),<br>
                 stellt man ihr ein <span class = "code"><b>private</b></span> voran.</p>
         </div>
 
-        <div class="box">
+        <div class="card">
           <p> Instanzen werden in lower_snake_case benannt.<br>
             Klassen werden in UpperCamelCase benannt.<br>
             Dateien, die Klassen enthalten, werden in UpperCamelCase benannt.
           </p>
       </div>
 
-      <div class="box" style="width: 250px">
+      <div class="card" style="width: 250px">
         <p> Mit <strong>attr_reader</strong> wird festgelegt,
           welche Variablen man aus dem Hauptprogramm aus lesen kann
           ohne dafür eine Methode schreiben zu müssen.
         </p>
     </div>
 
-    <div class="box" style="width: 250px">
+    <div class="card" style="width: 250px">
       <p> Mit <strong>attr_writer</strong> wird festgelegt,
         welche Variablen man aus dem Hauptprogramm aus verändern kann
         ohne dafür eine Methode schreiben zu müssen.
       </p>
   </div>
 
-    <div class="box" style="width: 250px">
+    <div class="card" style="width: 250px">
       <p> Mit <strong>attr_accessor</strong> wird festgelegt,
         welche Variablen man aus dem Hauptprogramm aus lesen und verändern kann
         ohne dafür eine Methode schreiben zu müssen.
