@@ -29,4 +29,4 @@ To use this guide, simply open the HTML file corresponding to the topic you're i
 
 ## Author
 
-[GoldieCrystal](https://github.com/GoldieCrystal)
+[Julia Kleber](https://github.com/JuliaKleber)
