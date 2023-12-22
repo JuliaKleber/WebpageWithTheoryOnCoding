@@ -92,11 +92,12 @@ td{
     font-family: 'Courier New';
 }
 
-.box, .card{
+.box, .card {
     background-color: white;
     padding: 28px 48px;
     margin: 24px;
     border-radius: 8px;
     border: 1px solid #EAEAEA;
     box-shadow: 0 0 16px rgba(0,0,0,0.1);
+    max-width: 600px;
 }
