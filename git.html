@@ -295,9 +295,11 @@
 
     <div class="card">
       <h4>Heroku</h4>
-      <p>heroku create</p>
-      <p>git push heroku main</p>
-      <p>heroku apps:rename neuer-name</p>
+      <p>heroku create --region eu</p>
+      <p>git push heroku main(:branch-name)</p>
+      <p>heroku apps:rename neuer-name --app alter-name</p>
+      <p>git remote remove heroku</p>
+      <p>git remote add heroku https://git.heroku.com/repo-name.git</p>
     </div>
     </section>
   </main>
