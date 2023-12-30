@@ -1,0 +1,197 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset='UTF-8'>
+  <title> Javascript - zusammengesetzte Datentypen </title>
+  <link rel='stylesheet' type='text/css' href='style_js.css'>
+</head>
+
+<body>
+  <header>
+    <img src='JS.png'>
+      <nav>
+        <div>
+          <a href='html_Allgemeines.html'>HTML</a>
+          <a href='css_Allgemeines.html'>CSS</a>
+          <a href='JS_Allgemeines.html'><strong>JavaScript</strong></a>
+          <a href='python_Allgemeines.html'>Python</a>
+          <a href='ruby_Allgemeines.html'>Ruby</a>
+          <a href='SQL.html'>SQL</a>
+          <a href='terminal.html'>Terminal</a>
+          <a href='git.html'>Git</a>
+          <a href='Abkuerzungen.html'>Abkürzungen</a>
+        </div>
+        <br>
+        <div>
+          <a href='JS_Allgemeines.html'>Allgemeines</a>
+          <a href='JS_Variablen.html'><strong>Datentypen</strong></a>
+          <a href='JS_if_else.html'>Strukturen</a>
+          <a href='JS_OO.html'>Klassen und Objekte</a><br>
+          <a href='JS_in_html.html'>JavaScript im Browser</a>
+          <a href='JS_Fehlerbehandlung.html'>Fehlerbehandlung</a>
+          <a href='react.html'>React</a>
+        </div>
+        <br>
+        <div>
+          <a href='JS_Variablen.html'>Variablen</a>
+          <a href='JS_Zahlen.html'>Zahlen</a>
+          <a href='JS_Boolean.html'>Boolean</a>
+          <a href='JS_Strings.html'>Strings</a>
+          <a href='JS_Arrays.html'><strong>Arrays</strong></a>
+          <a href='JS_Sets.html'>Sets</a>
+          <a href='JS_Maps.html'>Maps</a>
+        </div>
+      </nav>
+    <img src='JS.png'>
+  </header>
+  <main>
+    <div class='box'>
+      <h4>Array</h4>
+      <p>können Elemente unterschiedlichen Datentyps beinhalten</p>
+      <table>
+        <tr>
+          <td>let arr = [wert1, wert2]</td>
+          <td>Erstellen eines Arrays</td>
+        </tr>
+        <tr>
+          <td>arr1.concat(arr2)</td>
+          <td>Verkettung von Arrays</td>
+        </tr>
+        <tr>
+          <td>arr[i]</td>
+          <td>Zugriff auf i-te Element</td>
+        </tr>
+      </table>
+      <br>
+      <table>
+        <tr>
+          <td>arr[arr.length] = wert</td>
+          <td>Element am Ende hinzufügen</td>
+        </tr>
+        <tr>
+          <td>arr.push(wert)</td>
+          <td>Element am Ende hinzufügen</td>
+        </tr>
+        <tr>
+          <td>arr.unshift(wert)</td>
+          <td>Element am Anfang hinzufügen</td>
+        </tr>
+        <tr>
+          <td>arr.splice(i, 0, a, b)</td>
+          <td>a und b werden nach dem i-ten Element eingefügt.</td>
+        </tr>
+      </table>
+      <br>
+      <table>
+        <tr>
+          <td>arr.shift()</td>
+          <td>Element am Anfang entfernen</td>
+        </tr>
+        <tr>
+          <td>arr.pop()</td>
+          <td>Element am Ende entfernen</td>
+        </tr>
+        <tr>
+          <td>arr.splice(i, n)</td>
+          <td>n Elemente von i an werden aus dem Array gelöscht.</td>
+        </tr>
+      </table>
+      <br>
+      <table>
+        <tr>
+          <td>newArr = arr.splice(i, n)</td>
+          <td>Array mit n Elementen ab i-ten Element von arr</td>
+        </tr>
+        <tr>
+          <td>newArr = arr.slice(-3)</td>
+          <td>die letzten drei Elemente</td>
+        </tr>
+        <tr>
+          <td>newArr = arr.slice(1, 5)</td>
+          <td>2. bis 5. Element</td>
+        </tr>
+      </table>
+      <br>
+      <table>
+        <tr>
+          <td>arr.includes(element)</td>
+          <td>true, wenn element in Array enthalten ist</td>
+        </tr>
+        <tr>
+          <td>arr.indexOf(element)</td>
+          <td>gibt den Index des Elements zurück</td>
+        </tr>
+      </table>
+      <br>
+      <table>
+        <tr>
+          <td>arr.sort()</td>
+          <td>Sortieren in aufsteigender Reihenfolge</td>
+        </tr>
+        <tr>
+          <td>arr.reverse()</td>
+          <td>Sortieren in absteigender Reihenfolge</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class='box'>
+      <h4>array.map()</h4>
+      <p class='code'>arrayNew = array.map((element) => {});</p>
+      <p>Es wird ein neues Array auf Grundlage eines alten Arrays erstellt
+        <br>indem auf den Elementen des alten Arrays eine Funktion aufgerufen wird.
+      </p>
+    </div>
+
+    <div class='box'>
+      <h4>array.filter()</h4>
+      <p>Es wird ein neues Array erstellt, das nur einen Teil der Elemente enthält aufgrund einer definierten Bedingung</p>
+      <p class='code'>const newArray = array.filter(function(currentValue, index, arr) {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;block;<br>
+        });</p>
+      <p>Rückgabewert: true, wenn das Element beibehalten werden soll, ansonsten false</p>
+      <p class='code'>const numbers = [1, 2, 3, 4, 5, 6];<br>
+        const evenNumbers = numbers.filter(num => num % 2 === 0);
+      </p>
+    </div>
+
+    <div class='box'>
+      <h4>array.reduce()</h4>
+      <p>Es wird ein einzelner Wert aus einem Array erstellt</p>
+      <p class='code'>const newArray = array.reduce((accumulator, currentValue, <i>index, arr</i>) => {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;block;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<i>accumulator + currentValue;</i><br>
+        });</p>
+      <p><strong>reduceRight()</strong> wie reduce, die Elemente werden aber in umgekehrter Reihenfolge durchlaufen.</p>
+    </div>
+
+    <div class='box'>
+      <h4>array.find()</h4>
+      <p>Sucht nach erstem Element, dass eine Bedingung erfüllt.</p>
+      <p class='code'>const boolean = arr.find(element => element.length > 3)
+      </p>
+    </div>
+
+    <div class='box'>
+      <h4>array.every()</h4>
+      <p>Überprüft, ob alle Elemente eine Bedingung erfüllen</p>
+      <p class='code'>const boolean = arr.every(element => element.length > 3)
+      </p>
+    </div>
+
+    <div class='box'>
+      <h4>array.some()</h4>
+      <p>Überprüft, ob mindestens ein Element eine Bedingung erfüllt</p>
+      <p class='code'>const boolean = arr.some(element => element.length > 3)
+      </p>
+    </div>
+  </main>
+  <footer>
+    <span><b>Referenz</b></span>
+    <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript'>https://developer.mozilla.org/en-US/docs/Web/JavaScript</a>
+    <a href='https://bmu-verlag.de/js3'>https://bmu-verlag.de/js3</a>
+	</footer>
+</body>
+
+</html>
