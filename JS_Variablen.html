@@ -21,7 +21,8 @@
 				<a href='terminal.html'>Terminal</a>
 				<a href='git.html'>Git</a>
 				<a href='Abkuerzungen.html'>Abk&uuml;rzungen</a>
-			</div><br>
+			</div>
+      <br>
 			<div>
 				<a href='JS_Allgemeines.html'>Allgemeines</a>
 				<a href='JS_Variablen.html'><strong>Datentypen</strong></a>
@@ -30,7 +31,8 @@
 				<a href='JS_in_html.html'>JavaScript im Browser</a>
 				<a href='JS_Fehlerbehandlung.html'>Fehlerbehandlung</a>
 				<a href='JS_react.html'>React</a>
-			</div><br>
+			</div>
+      <br>
 			<div>
 				<a href='JS_Variablen.html'><strong>Variablen</strong></a>
 				<a href='JS_Zahlen.html'>Zahlen</a>
@@ -39,10 +41,12 @@
         <a href='JS_Arrays.html'>Arrays</a>
         <a href='JS_Sets.html'>Sets</a>
         <a href='JS_Maps.html'>Maps</a>
+        <a href='JS_Objects.html'>Objects</a>
 			</div>
 		</nav>
 		<img src='JS.png'>
 	</header>
+
 	<main>
     <div class='card'>
       <p>loose typing</p>
@@ -58,43 +62,124 @@
       <p>let meineVariable;</p>
       <h4>Initialisierung von Variablen</h4>
       <p>meineVariable = 10;</p>
+      <h4>Deklaration und Initialisierung</h4>
+      <p>let meineVariable = 10;</p>
     </div>
 
     <div class='card'>
-      <h4>Typabfrage</h4>
-      <p>typeof meineVariable;<br>
-      number, string, boolean, undefined, NaN (Not a Number)<br><br>
-      arr.isArray([1, 2, 3]); // true<br>
-      isNaN(9) // false
+      <h4>primitive Datentypen</h4>
+      <p>number, string, boolean, symbol, undefined, null</p>
+      <h4>referenzierte Datentypen</h4>
+      <p>object, array, function</p>
+    </div>
+
+    <div class='card'>
+      <p>
+        Bei <strong>primitiven Datentypen</strong> wird der Wert der Variable in den Speicher geschrieben.
+        Für <strong>referenzierte Variablen</strong> wird ein Zeiger bzw. eine Referenz auf das Objekt gespeichert.
+      </p>
+      <p>
+        Bei <strong>primitiven Datentypen</strong> wird der Wert direkt an eine Funktion übergeben.
+        Änderungen an diesem Wert innerhalb der Funktion haben keine Auswirkungen auf die ursprüngliche Variable außerhalb der Funktion.<br>
+        Bei <strong>referenzierten Datentypen</strong> wird die Referenz an die Funktion übergeben.
+        Änderungen am Objekt innerhalb der Funktion wirken sich auf das ursprüngliche Objekt außerhalb der Funktion aus.
       </p>
     </div>
 
     <div class='card'>
-      <h4>Typkonvertierung</h4>
-      <p>Number(variable);<br>
-      parseInt(variable, Zahlensystem/Basis);<br>
-      parseFloat(variable);<br>
-      String(variable);
+      <h4>Typabfrage / typeof</h4>
+      <p class='code'>typeof variableName</p>
+      <p>Gibt 'number', 'string', 'boolean', 'symbol', 'function', 'object' oder 'undefined' zurück.</p>
+      <p>Vor allem zur Typabfrage von primitiven Datentypen.</p>
+    </div>
+
+    <div class='card'>
+      <h4>Typabfrage / instanceof</h4>
+      <p class='code'>variableName instanceof Object/Array/Function</p>
+      <p>Gibt true oder false zurück.</p>
+      <p>Sowohl Arrays als auch Funktionen sind Instanzen von Object.</p>
+      <p>Vor allem zur Typabfragen von referenzierten Datentypen.</p>
+    </div>
+
+    <div class='card'>
+      <h4>Typabfrage / Array.isArray()</h4>
+      <p>
+        Array.isArray([1, 2, 3]) // true<br>
       </p>
     </div>
 
-	<div class='card'>
-	  <h4>Typkonvertierung von Arrays und Objekten</h4>
-	  <p>
-      let arr = [1, 2, 3];<br>
-      let arrString = arr.join(','); // '1,2,3'<br>
-      let newArr = arrString.split(','); // [1, 2, 3]<br><br>
-      let obj = { name: 'John', age: 30 };<br>
-      let objString = JSON.stringify(obj); // '{'name':'John','age':30}'<br>
-      let newObj = JSON.parse(objString); // { name: 'John', age: 30 }
-	  </p>
-	</div>
+    <div class='card'>
+      <h4>Typabfrage / isNaN()</h4>
+      <p>
+        isNaN(9) // false
+      </p>
+    </div>
+
+    <div class='card'>
+      <h4>Typkonvertierung / String</h4>
+      <p>
+        value.toString();<br>
+        String(value);
+      </p>
+    </div>
+
+    <div class='card'>
+      <h4>Typkonvertierung / Number</h4>
+      <p>
+        Number(value);<br>
+        parseInt(value, Zahlensystem/Basis);<br>
+        parseFloat(value);<br>
+      </p>
+    </div>
+
+    <div class='card'>
+      <h4>Typkonvertierung / Boolean</h4>
+      <p>Boolean(value);</p>
+      <p>0, '', null, undefined, NaN werden zu false konvertiert.</p>
+      <p>Alles andere wird zu true konvertiert.</p>
+    </div>
+
+    <div class='card'>
+      <h4>Typkonvertierung / Array</h4>
+      <p>
+        Array.from(value);<br>
+        Array.of(value);<br>
+        Array(value);
+      </p>
+      <p>Array(value) versucht das Objekt in ein Array zu konvertieren.</p>
+    </div>
+
+    <div class='card'>
+      <h4>Typkonvertierung / Object</h4>
+      <p>
+        Object(value);
+      </p>
+    </div>
+
+    <div class='card'>
+      <h4>Typkonvertierung / JSON <-> Strings</h4>
+      <p>
+        let newStr = JSON.stringify(newObj);  // '{'name':'John','age':30}'<br>
+        let newObj = JSON.parse(newStr);    // { name: 'John', age: 30 }
+      </p>
+    </div>
+
+    <div class='card'>
+      <h4>Typkonvertierung / Arrays <-> Strings</h4>
+      <p>
+        let newStr = newArr.join(',');   // '1,2,3'<br>
+        let newArr = newStr.split(',');  // [1, 2, 3]<br><br>
+      </p>
+    </div>
+
 	</main>
+
 	<footer>
     <span><b>Referenz</b></span>
     <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript'>https://developer.mozilla.org/en-US/docs/Web/JavaScript</a>
     <a href='https://bmu-verlag.de/js3'>https://bmu-verlag.de/js3</a>
-</footer>
+  </footer>
+
 </body>
 
 </html>

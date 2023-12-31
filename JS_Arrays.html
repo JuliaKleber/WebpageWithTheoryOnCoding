@@ -45,8 +45,9 @@
       </nav>
     <img src='JS.png'>
   </header>
+
   <main>
-    <div class='box'>
+    <div class='card'>
       <h4>Array</h4>
       <p>können Elemente unterschiedlichen Datentyps beinhalten</p>
       <table>
@@ -66,20 +67,20 @@
       <br>
       <table>
         <tr>
-          <td>arr[arr.length] = wert</td>
-          <td>Element am Ende hinzufügen</td>
+          <td>arr.unshift(wert)</td>
+          <td>Element am Anfang hinzufügen</td>
         </tr>
         <tr>
           <td>arr.push(wert)</td>
           <td>Element am Ende hinzufügen</td>
         </tr>
         <tr>
-          <td>arr.unshift(wert)</td>
-          <td>Element am Anfang hinzufügen</td>
+          <td>arr[arr.length] = wert</td>
+          <td>Element am Ende hinzufügen</td>
         </tr>
         <tr>
           <td>arr.splice(i, 0, a, b)</td>
-          <td>a und b werden nach dem i-ten Element eingefügt.</td>
+          <td>Einfügen von a und b nach dem i-ten Element</td>
         </tr>
       </table>
       <br>
@@ -94,39 +95,51 @@
         </tr>
         <tr>
           <td>arr.splice(i, n)</td>
-          <td>n Elemente von i an werden aus dem Array gelöscht.</td>
+          <td>Löschen von n Elementen ab i-ten Index</td>
+        </tr>
+        <tr>
+          <td>arr.copyWithin(target, start, end)</td>
+          <td>Kopieren und Einfügen von Elementen an andere Stelle des Arrays (target)</td>
         </tr>
       </table>
       <br>
       <table>
         <tr>
           <td>newArr = arr.splice(i, n)</td>
-          <td>Array mit n Elementen ab i-ten Element von arr</td>
+          <td>Array mit n Elementen ab i-ten Index erstellen, Elemente werden aus arr gelöschtt</td>
         </tr>
         <tr>
           <td>newArr = arr.slice(-3)</td>
-          <td>die letzten drei Elemente</td>
+          <td>Kopieren der letzten drei Elementet</td>
         </tr>
         <tr>
           <td>newArr = arr.slice(1, 5)</td>
-          <td>2. bis 5. Element</td>
+          <td>Kopieren des 2. bis 5. Elements</td>
         </tr>
       </table>
       <br>
       <table>
         <tr>
-          <td>arr.includes(element)</td>
-          <td>true, wenn element in Array enthalten ist</td>
+          <td>arr.includes(el, startindex)</td>
+          <td>true, wenn Element el in Array enthalten ist</td>
         </tr>
         <tr>
-          <td>arr.indexOf(element)</td>
-          <td>gibt den Index des Elements zurück</td>
+          <td>arr.indexOf(el, startindex)</td>
+          <td>Index des ersten Vorkommens des Elements oder -1 zurückgeben</td>
+        </tr>
+        <tr>
+          <td>arr.lastIndexOf(el, endindex)</td>
+          <td>Index des letzten Vorkommens des Elements oder -1 zurückgeben</td>
+        </tr>
+        <tr>
+          <td>arr.find(el, startindex)</td>
+          <td>Gibt das Element oder -1 zurück</td>
         </tr>
       </table>
       <br>
       <table>
         <tr>
-          <td>arr.sort()</td>
+          <td>arr.sort((a, b) => a - b)</td>
           <td>Sortieren in aufsteigender Reihenfolge</td>
         </tr>
         <tr>
@@ -135,12 +148,40 @@
         </tr>
         <tr>
           <td>arr.reverse()</td>
-          <td>Array in umgekehrter Reihenfolge</td>
+          <td>Array umkehren</td>
+        </tr>
+      </table>
+      <br>
+      <table>
+        <tr>
+          <td>arr.toString()</td>
+          <td>Konvertierung zu einem String</td>
+        </tr>
+        <tr>
+          <td>arr.toLocaleString()</td>
+          <td>Konvertierung zu einem String</td>
+        </tr>
+        <tr>
+          <td>arr.valueOf()</td>
+          <td>Konvertierung zu einem String</td>
+        </tr>
+        <tr>
+          <td>arr.join('')</td>
+          <td>Konvertierung zu einem String</td>
         </tr>
       </table>
     </div>
 
-    <div class='box'>
+    <div class='card'>
+      <h4>array.forEach()</h4>
+      <p>Es wird eine Funktion auf jedes Element des Arrays angewendet</p>
+      <p class='code'>array.forEach((element, index, arr) => {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;block;<br>
+        });
+      </p>
+    </div>
+
+    <div class='card'>
       <h4>array.map()</h4>
       <p class='code'>arrayNew = array.map((element) => {});</p>
       <p>Es wird ein neues Array auf Grundlage eines alten Arrays erstellt
@@ -148,54 +189,74 @@
       </p>
     </div>
 
-    <div class='box'>
+    <div class='card'>
       <h4>array.filter()</h4>
       <p>Es wird ein neues Array erstellt, das nur einen Teil der Elemente enthält aufgrund einer definierten Bedingung</p>
       <p class='code'>const newArray = array.filter(function(currentValue, index, arr) {<br>
         &nbsp;&nbsp;&nbsp;&nbsp;block;<br>
-        });</p>
+        });
+      </p>
       <p>Rückgabewert: true, wenn das Element beibehalten werden soll, ansonsten false</p>
-      <p class='code'>const numbers = [1, 2, 3, 4, 5, 6];<br>
+      <p class='code'>
+        const numbers = [1, 2, 3, 4, 5, 6];<br>
         const evenNumbers = numbers.filter(num => num % 2 === 0);
       </p>
     </div>
 
-    <div class='box'>
+    <div class='card'>
       <h4>array.reduce()</h4>
       <p>Es wird ein einzelner Wert aus einem Array erstellt</p>
       <p class='code'>const newArray = array.reduce((accumulator, currentValue, <i>index, arr</i>) => {<br>
         &nbsp;&nbsp;&nbsp;&nbsp;block;<br>
         &nbsp;&nbsp;&nbsp;&nbsp;<i>accumulator + currentValue;</i><br>
-        });</p>
+        });
+      </p>
       <p><strong>reduceRight()</strong> wie reduce, die Elemente werden aber in umgekehrter Reihenfolge durchlaufen.</p>
     </div>
 
-    <div class='box'>
+    <div class='card'>
       <h4>array.find()</h4>
       <p>Sucht nach erstem Element, dass eine Bedingung erfüllt.</p>
-      <p class='code'>const boolean = arr.find(element => element.length > 3)
-      </p>
+      <p class='code'>const boolean = arr.find(element => element.length > 3)</p>
     </div>
 
-    <div class='box'>
+    <div class='card'>
       <h4>array.every()</h4>
       <p>Überprüft, ob alle Elemente eine Bedingung erfüllen</p>
-      <p class='code'>const boolean = arr.every(element => element.length > 3)
+      <p class='code'>const boolean = arr.every(element => element.length > 3)</p>
+    </div>
+
+    <div class='card'>
+      <h4>array.some()</h4>
+      <p>Überprüft, ob mindestens ein Element eine Bedingung erfüllt</p>
+      <p class='code'>const boolean = arr.some(element => element.length > 3)</p>
+    </div>
+
+    <div class='card'>
+      <h4>Überprüfen, ob ein Array leer ist</h4>
+      <p class='code'>arr.length === 0</p>
+    </div>
+
+    <div class='card'>
+      <h4>Stack</h4>
+      <p>LIFO - Last In, First Out</p>
+      <p>push & pop</p>
       </p>
     </div>
 
-    <div class='box'>
-      <h4>array.some()</h4>
-      <p>Überprüft, ob mindestens ein Element eine Bedingung erfüllt</p>
-      <p class='code'>const boolean = arr.some(element => element.length > 3)
+    <div class='card'>
+      <h4>Queue</h4>
+      <p>FIFO - First In, First Out</p>
+      <p>push & shift</p>
       </p>
     </div>
   </main>
+
   <footer>
     <span><b>Referenz</b></span>
     <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript'>https://developer.mozilla.org/en-US/docs/Web/JavaScript</a>
     <a href='https://bmu-verlag.de/js3'>https://bmu-verlag.de/js3</a>
 	</footer>
-</body>
 
+</body>
 </html>
